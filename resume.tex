@@ -1,0 +1,235 @@
+\documentclass[12pt,letterpaper]{article}
+
+\def\myauthor{Benjamin Ran}
+\def\mytitle{resume}
+\def\myemail{benjaminran@ucsc.edu}
+\def\myweb{benjaminran}
+\def\myphone{650-814-1946}
+\def\mykeywords{
+  benjamin ran,
+  resume, 
+  benjamin,
+  ran
+}
+
+\setlength\parindent{0pt}
+
+\newenvironment{itemize*}%
+{\begin{itemize}%
+  \setlength{\itemsep}{0pt}}%
+{\end{itemize}}
+
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+%\usepackage{ocgtools}
+\usepackage{enumitem}
+\setlist{nolistsep,leftmargin=0.15in}
+\usepackage[log-declarations=false]{xparse}
+\usepackage[adobe-garamond]{mathdesign}
+\usepackage[no-math]{fontspec}
+\usepackage{microtype}
+\usepackage[margin=1.125in,top=1.375in,right=1in,left=2in]{geometry}
+\usepackage[strict]{changepage}
+\usepackage[
+  ocgcolorlinks,
+  urlcolor={[rgb]{0,0,0.54}},
+  unicode,
+  plainpages=false,
+  pdfpagelabels,
+  pdftitle={\mytitle},
+  pdfauthor={\myauthor},
+  pdfkeywords={\mykeywords}
+]{hyperref}
+\usepackage{verbatim}
+\usepackage{multicol}
+
+% fix ocgcolor link breaking; thanks due to Benjamin Lerner (http://goo.gl/VZKR7M)
+\makeatletter
+\AtBeginDocument{%
+  \newlength{\temp@x}%
+  \newlength{\temp@y}%
+  \newlength{\temp@w}%
+  \newlength{\temp@h}%
+  \def\my@coords#1#2#3#4{%
+    \setlength{\temp@x}{#1}%
+    \setlength{\temp@y}{#2}%
+    \setlength{\temp@w}{#3}%
+    \setlength{\temp@h}{#4}%
+    \adjustlengths{}%
+    \my@pdfliteral{\strip@pt\temp@x\space\strip@pt\temp@y\space\strip@pt\temp@w\space\strip@pt\temp@h\space re}}%
+  \ifpdf
+    \typeout{In PDF mode}%
+    \def\my@pdfliteral#1{\pdfliteral page{#1}}% I don't know why % this command...
+    \def\adjustlengths{}%
+  \fi
+  \ifxetex
+    \def\my@pdfliteral #1{\special{pdf: literal direct #1}}% isn't equivalent to this one
+    \def\adjustlengths{\setlength{\temp@h}{-\temp@h}\addtolength{\temp@y}{1in}\addtolength{\temp@x}{-1in}}%
+  \fi%
+  \def\Hy@colorlink#1{%
+    \begingroup
+      \ifHy@ocgcolorlinks
+        \def\Hy@ocgcolor{#1}%
+        \my@pdfliteral{q}%
+        \my@pdfliteral{7 Tr}% Set text mode to clipping-only
+      \else
+        \HyColor@UseColor#1%
+      \fi
+  }%
+  \def\Hy@endcolorlink{%
+    \ifHy@ocgcolorlinks%
+      \my@pdfliteral{/OC/OCPrint BDC}%
+      \my@coords{0pt}{0pt}{\pdfpagewidth}{\pdfpageheight}%
+      \my@pdfliteral{F}% Fill clipping path (the url's text) with current color
+      \my@pdfliteral{EMC/OC/OCView BDC}%
+      \begingroup%
+        \expandafter\HyColor@UseColor\Hy@ocgcolor%
+        \my@coords{0pt}{0pt}{\pdfpagewidth}{\pdfpageheight}%
+        \my@pdfliteral{F}% Fill clipping path (the url's text) with \Hy@ocgcolor
+      \endgroup%
+      \my@pdfliteral{EMC}%
+      \my@pdfliteral{0 Tr}% Reset text to normal mode
+      \my@pdfliteral{Q}%
+    \fi
+    \endgroup
+  }%
+}
+\makeatother
+% end fixes
+
+\newcommand{\ML}{\textsc{Matlab}}
+\newcommand{\Simu}{Simulink}
+\newcommand{\MLS}{\ML{}/\Simu{}}
+\newcommand{\apdl}{\textsc{APDL}}
+\newcommand{\ansys}{\textsc{Ansys}}
+\newcommand{\fluent}{\textsc{Fluent}}
+\newcommand\CPP{C/C\ensuremath{+}\ensuremath{+}}
+\newcommand{\Star}{\textsc{Star-CCM\ensuremath{+}}}
+
+\newcommand{\mhead}[1]{\leavevmode\marginpar{\sffamily\footnotesize #1}}
+\newcommand{\rdate}[1]{{\addfontfeature{Numbers=OldStyle} \hfill #1}}
+\renewcommand{\date}[1]{{\addfontfeature{Numbers=OldStyle} #1}}
+\renewcommand{\labelitemi}{-} 
+
+\setmainfont[
+  Ligatures={TeX,Common},
+  BoldFont={AGaramondPro-Semibold},
+]{Adobe Garamond Pro}
+\setsansfont[
+  Ligatures={TeX,Common},
+  Letters=SmallCaps,
+  Color=660000,
+]{Adobe Garamond Pro}
+\setmonofont[Scale=0.85]{FontAwesome}
+
+\makeatletter % fix for \hrulefill w/ mathdesign package
+\def\hrulefill{\leavevmode\leaders \hrule height \rulethickness \hfill\kern\z@}
+\makeatletter
+
+%%%%% Document Start %%%%%
+\begin{document}\flushbottom
+\pagestyle{fancy} \setlength\headwidth{6.5in}
+\rhead{\textsc{Benjamin ~Ran—r\'{e}sum\'{e}—\thepage{} of \pageref*{LastPage}}} \cfoot{}
+\thispagestyle{empty}
+\begin{adjustwidth}{-1in}{}
+{\Huge
+  {\textsc{%
+    {\addfontfeature{Style=TitlingCaps}B}\kern-1.5ptenjamin 
+%    {\addfontfeature{Style=TitlingCaps}D}\kern-2pt.~%
+    {\addfontfeature{Style=TitlingCaps}R}an}
+  }
+}
+\hfill\hfill\hfill
+{
+  \begin{minipage}[b]{1.2in}
+    \flushleft \footnotesize 
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{2in}
+    \flushright \footnotesize 
+    Palo Alto, CA \\
+    \href{tel:\myphone}{\myphone} \\ %\texttt{}~
+    \href{mailto:\myemail}{\myemail} \\
+    \href{https://www.github.com/\myweb}{\texttt{}}~\href{https://www.linkedin.com/in/\myweb}{\texttt{}~\myweb}
+  \end{minipage}
+}\par
+\hrulefill
+\end{adjustwidth}  
+\reversemarginpar 
+\setlength\marginparwidth{0.85in}
+\smallskip
+
+%%%%% Education %%%%%
+\mhead{Education}%
+\textbf{University of California at Santa Cruz,} Santa Cruz, California \newline
+\emph{Bachelor of Science, Computer Science} \rdate{2014–2017 (Expected)}
+\begin{itemize*}
+  \item GPA: 4.00/4.00
+\end{itemize*}
+\medskip
+
+\textbf{Gunn High School,} Palo Alto, California
+\begin{itemize*}
+  \item GPA: 4.19 weighted, 3.83 unweighted \rdate{2010-2014}
+\end{itemize*}
+\bigskip
+
+%%%%% Professonal Experience %%%%%
+\mhead{Professional \newline Experience}%
+\textbf{Waterline Data,} Mountain View, CA \newline
+\emph{QA Intern} \rdate{\textsc{june}~2015–\textsc{september}~2015}
+\begin{itemize*}
+  \item Configured and debugged HDFS environments
+  \item Wrote regression, integration and unit tests for the primary product
+  \item Configured and worked with CDH and HDP Hadoop distributions using Kerberos authentication as well as Apache Sentry 
+    and Ranger authorization to ensure proper function of the Waterline Data Inventory in its interactions with HDFS and Apache Hive
+\end{itemize*}
+\bigskip
+
+%%%%% Private Projects %%%%%
+\mhead{Private \newline Projects}%
+\textbf{InTune} \newline
+\emph{Android Application} \rdate{\textsc{june}~2014–\textsc{present}} \newline
+Developing an app to perform pattern recognition of pitches played by musicians in order to give intonation feedback.
+\medskip\newline
+\textbf{SOE Event Scraper} \newline
+\emph{Web Service} \rdate{\textsc{march}~2015} \newline
+Wrote and deployed a Python web scraper onto an Amazon EC2 Ubuntu server to be run daily as a Cron job that refreshes an iCalendar feed made publicly available through an Apache web server. The feed allows for subscription to the events listed on UCSC’s engineering department website from calendar applications (i.e. Google Calendar).
+\medskip\newline
+\textbf{Afraid of Flying} \newline
+\emph{Android Application} \rdate{\textsc{may}~2014-\textsc{june}~2014}\newline
+Published an app to the Google Play store that uses multiple sensors to detect and react to free fall. Completed entire development process, from functional testing and performance profiling to analytics and crash analysis.
+\bigskip
+
+%%%%% Skills %%%%%
+\mhead{Skills}
+\vspace{-9mm}% TODO make better
+\begin{multicols}{3}
+\begin{itemize}
+  \item Android Development
+  \item Web Development
+  \item Backend Programming
+  \item Hadoop
+  \item HDFS Administration
+  \item Kerberos
+  \item Shell Scripting
+  \item Test Automation
+  \item CI Configuration
+\end{itemize}
+\end{multicols}
+\bigskip
+
+%%%%% Languages %%%%%
+\mhead{Languages}%
+Java, Python, \CPP{}, SQL, Javascript, Bash, Groovy, Spanish
+\bigskip
+
+%%%%% Interests %%%%%
+\mhead{Interests}
+Programming,
+Jazz,
+Trumpet,
+Gymnastics,
+Windsurfing
+\end{document}
