@@ -1,28 +1,11 @@
-###########
-# TeX
-###########
-*.pdf
+### TeX
 *.log
-*.swp
-*.tcp
 *.aux
-*.bbl
-*.blg
 *.out
-*.synctex
-*.synctex(busy)
-*.tps
 *.otf
-awk
-gawk.exe.stackdump
-gitHeadInfo.gin
-gitTreeInfo.gtr
-git-forest.pl
-gitgraph.txt
-sample.txt
 
+### Emacs
+**/*~
 
-##########
-# OS X
-##########
+### OS X
 **/*.DS_Store
