@@ -9,3 +9,6 @@
 
 ### OS X
 **/*.DS_Store
+
+### Authentication Tokens
+util/bitly-oauth
