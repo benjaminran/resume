@@ -107,6 +107,7 @@
 \newcommand\CPP{C/C\ensuremath{+}\ensuremath{+}}
 \newcommand{\Star}{\textsc{Star-CCM\ensuremath{+}}}
 
+\newcommand{\suplinks}[1]{\begin{footnotesize} #1 \end{footnotesize}}
 \newcommand{\mhead}[1]{\leavevmode\marginpar{\sffamily\footnotesize #1}}
 \newcommand{\rdate}[1]{{\addfontfeature{Numbers=OldStyle} \hfill #1}}
 \renewcommand{\date}[1]{{\addfontfeature{Numbers=OldStyle} #1}}
@@ -162,7 +163,7 @@
 
 %%%%% Education %%%%%
 \mhead{Education}%
-\textbf{University of California at Santa Cruz,} Santa Cruz, California \\
+\textbf{University of California at Santa Cruz}, Santa Cruz, California \\
 \emph{Bachelor of Science, Computer Science} \rdate{2014–2017 (Expected)}
 \begin{itemize*}
   \item GPA: 4.00/4.00
@@ -177,8 +178,8 @@
 
 %%%%% Professonal Experience %%%%%
 \mhead{Professional \\ Experience}%
-\textbf{Waterline Data}, Mountain View, CA \\
-\emph{QA Intern} \rdate{\textsc{june}~2015–\textsc{september}~2015}
+\textbf{Waterline Data}, Mountain View, CA \rdate{\textsc{june}~2015–\textsc{september}~2015}\\
+\emph{QA Intern} \hfill \suplinks{\href{http://waterlinedata.com/}{Website}}
 \begin{itemize*}
   \item Configured and debugged HDFS environments
   \item Wrote regression, integration and unit tests for primary product
@@ -186,24 +187,24 @@
 \end{itemize*}
 \medskip
 
-\textbf{HackingEDU Hackathon}\\
-\emph{Developer} \rdate{\textsc{october}~2015}
+\textbf{HackingEDU Hackathon}\rdate{\textsc{october}~2015}\\
+\emph{Developer} \hfill \suplinks{\href{http://devpost.com/software/studyadvisor}{Devpost} | \href{https://github.com/DR-BoneZ/StudyAdvisor}{Source}}
 \begin{itemize}
   \item Worked in a team of four to create a web page recommender Chrome extension.
   \item Developed web crawler to find high quantities of related pages
-  \item Implemented an algorithm to determine relevant webpages based on user's history
+  \item Implemented an algorithm to determine relevant webpages based on browsing history
 \end{itemize}
 \bigskip
 
 %%%%% Private Projects %%%%%
 \mhead{Private \\ Projects}%
-\textbf{InTune} \\
-\emph{Android Application} \rdate{\textsc{june}~2014–\textsc{present}} \\
+\textbf{InTune} \rdate{\textsc{june}~2014–\textsc{present}}\\
+\emph{Android Application} \hfill \suplinks{\href{https://github.com/benjaminran/InTune}{Source}}\\
 Developing an app to perform pattern recognition on pitches played by musicians in order to give intonation feedback
 \medskip
 
-\textbf{Afraid of Flying} \\
-\emph{Android Application} \rdate{\textsc{may}~2014-\textsc{june}~2014}\\
+\textbf{Afraid of Flying} \rdate{\textsc{may}~2014-\textsc{june}~2014}\\
+\emph{Android Application} \hfill \suplinks{\href{https://play.google.com/store/apps/details?id=com.bran.afraidofflying&hl=en}{Play} | \href{https://github.com/benjaminran/afraid-of-flying}{Source}}\\
 Published an app to the Google Play store that uses multiple sensors to detect and react to free fall
 \bigskip
 
@@ -228,7 +229,7 @@ Published an app to the Google Play store that uses multiple sensors to detect a
 \vspace{-5mm}% TODO make better
 %%%%% Languages %%%%%
 \mhead{Languages}%
-Java, Python, \CPP{}, Javascript, Bash, Groovy, Scala, Spanish
+Java, Python, \CPP{}, Javascript, Bash
 \medskip
 
 %%%%% Build Systems %%%%%

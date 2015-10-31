@@ -20,8 +20,8 @@ def login_to_linkedin():
 def update_linkedin_summary(newlink):
     """Insert newlink in the place of the old resume link in LinkedIn summary"""
     login_to_linkedin()
-    edit_profile = driver.find_elements_by_link_text("Profile")
-    edit_profile[0].click()
+    edit_profile = driver.find_elements_by_link_text("Profile")[0]
+    edit_profile.click()
     edit_summary = driver.find_element_by_css_selector("p.body-field:nth-child(1) > button:nth-child(1)")
     edit_summary.click()
     summary = driver.find_element_by_id("expertise_comments-editExpertiseForm")
@@ -31,6 +31,15 @@ def update_linkedin_summary(newlink):
     summary.send_keys(new_summary)
     submit = driver.find_element_by_name("submit")
     submit.click()
+    contact_info = driver.find_element_by_partial_link_text("Contact Info")
+    contact_info.click()
+    resume_site = driver.find_element_by_css_selector("div.field > ul.field-text > li")
+    resume_site.click()
+    resume_site_link = driver.find_element_by_id("url_addr-memberURLParam0-editContactInfoForm")
+    resume_site_link.clear()
+    resume_site_link.send_keys(newlink)
+    contact_info_submit = driver.find_element_by_name("submit")
+    contact_info_submit.click()
     driver.close()
 
 def parse_credentials(ini_file):
