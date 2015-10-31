@@ -10,5 +10,9 @@
 ### OS X
 **/*.DS_Store
 
-### Authentication Tokens
+### Python
+venv
+
+### Authentication Information
 util/bitly-oauth
+credentials.ini
