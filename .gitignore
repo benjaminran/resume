@@ -16,3 +16,6 @@ venv
 ### Authentication Information
 util/bitly-oauth
 credentials.ini
+
+### Temporary file
+**/*.tmp

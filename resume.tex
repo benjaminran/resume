@@ -108,7 +108,7 @@
 \newcommand\CPP{C/C\ensuremath{+}\ensuremath{+}}
 \newcommand{\Star}{\textsc{Star-CCM\ensuremath{+}}}
 
-\definecolor{footergray}{gray}{0.8}
+\definecolor{footergray}{gray}{0.7}
 
 \newcommand{\suplinks}[1]{\begin{footnotesize} #1 \end{footnotesize}}
 \newcommand{\mhead}[1]{\leavevmode\marginpar{\sffamily\footnotesize #1}}
@@ -137,14 +137,13 @@
 %\rhead{\textsc{Benjamin ~Ran—r\'{e}sum\'{e}—\thepage{} of \pageref*{LastPage}}} 
 \cfoot{
 \begin{footnotesize}
+  \hypersetup{urlcolor=footergray}
   \color{footergray}
   %%@sub{LAST_UPDATED}
   ~|~
-  \href{
-    https://github.com/benjaminran/resume/commit/%%@sub{GIT_COORDINATES}
-  }{
-    \textcolor{footergray}{\texttt{}~%%@sub{GIT_COORDINATES}
-  }}
+  \href{https://www.github.com/benjaminran/resume/tree/%%@sub{GIT_COORDINATES}
+  }{\texttt{}~%%@sub{GIT_COORDINATES}
+  }
 \end{footnotesize}
 }
 %\thispagestyle{empty}
@@ -265,9 +264,4 @@ Trumpet,
 Gymnastics,
 Windsurfing
 
-%%%%% Footer %%%%%
-\vfill
-{
-\begin{center}
-\end{center}
 \end{document}
