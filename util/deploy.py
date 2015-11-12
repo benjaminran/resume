@@ -1,8 +1,10 @@
-#!/usr/bin/python3
+#!venv/bin/python3
 import sys
 import re
 import configparser
 from selenium import webdriver
+
+import pdb
 
 
 def login_to_linkedin():
@@ -20,6 +22,7 @@ def login_to_linkedin():
 def update_linkedin_summary(newlink):
     """Insert newlink in the place of the old resume link in LinkedIn summary"""
     login_to_linkedin()
+    pdb.set_trace()
     edit_profile = driver.find_elements_by_link_text("Profile")[0]
     edit_profile.click()
     edit_summary = driver.find_element_by_css_selector("p.body-field:nth-child(1) > button:nth-child(1)")
