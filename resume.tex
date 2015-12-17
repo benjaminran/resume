@@ -44,6 +44,7 @@
 \usepackage{verbatim}
 \usepackage{multicol}
 \usepackage{xcolor}
+\usepackage{etoolbox}
 
 % fix ocgcolor link breaking; thanks due to Benjamin Lerner (http://goo.gl/VZKR7M)
 \makeatletter
@@ -99,14 +100,6 @@
 \makeatother
 % end fixes
 
-\newcommand{\ML}{\textsc{Matlab}}
-\newcommand{\Simu}{Simulink}
-\newcommand{\MLS}{\ML{}/\Simu{}}
-\newcommand{\apdl}{\textsc{APDL}}
-\newcommand{\ansys}{\textsc{Ansys}}
-\newcommand{\fluent}{\textsc{Fluent}}
-\newcommand\CPP{C/C\ensuremath{+}\ensuremath{+}}
-\newcommand{\Star}{\textsc{Star-CCM\ensuremath{+}}}
 
 \definecolor{footergray}{gray}{0.6}
 
@@ -131,6 +124,17 @@
 \def\hrulefill{\leavevmode\leaders \hrule height \rulethickness \hfill\kern\z@}
 \makeatletter
 
+%% Conditional Inclusions
+\newtoggle{OBJECTIVE_INCLUDED}
+\toggle%%@sub{OBJECTIVE_INCLUDED}%%{OBJECTIVE_INCLUDED}
+
+\newtoggle{BUILD_SYSTEMS_INCLUDED}
+\toggle%%@sub{BUILD_SYSTEMS_INCLUDED}%%{BUILD_SYSTEMS_INCLUDED}
+
+\newtoggle{VCS_INCLUDED}
+\toggle%%@sub{VCS_INCLUDED}%%{VCS_INCLUDED}
+
+
 %%%%% Document Start %%%%%
 \begin{document}\flushbottom
 \pagestyle{fancy} \setlength\headwidth{6.5in}
@@ -139,10 +143,10 @@
 \begin{footnotesize}
   \hypersetup{urlcolor=footergray}
   \color{footergray}
-  %%@sub{LAST_UPDATED}
+  %%@sub{LAST_UPDATED}%%
   ~|~
-  \href{https://www.github.com/benjaminran/resume/tree/%%@sub{GIT_COORDINATES}
-  }{\texttt{}~%%@sub{GIT_COORDINATES}
+  \href{https://www.github.com/benjaminran/resume/tree/%%@sub{GIT_COORDINATES}%%
+  }{\texttt{}~%%@sub{GIT_COORDINATES}%%
   }
 \end{footnotesize}
 }
@@ -175,6 +179,13 @@
 \setlength\marginparwidth{0.85in}
 \smallskip
 
+%%%%% Objective %%%%%
+\iftoggle{OBJECTIVE_INCLUDED}{
+  \mhead{Objective}
+  \emph{%%@sub{OBJECTIVE}%%\\}
+  \bigskip
+}{}
+
 %%%%% Education %%%%%
 \mhead{Education}
 \textbf{University of California at Santa Cruz}, Santa Cruz, California \\
@@ -205,8 +216,6 @@
 \emph{Developer} \hfill \suplinks{\href{http://devpost.com/software/studyadvisor}{Devpost} | \href{https://github.com/DR-BoneZ/StudyAdvisor}{Source}}
 \begin{itemize}
   \item Worked in a team of four to create a web page recommender Chrome extension.
-  \item Developed web crawler to find high quantities of related pages
-  \item Implemented an algorithm to determine relevant webpages based on browsing history
 \end{itemize}
 \bigskip
 
@@ -225,14 +234,8 @@ Created a web crawler to scrape and publish a feed of the UCSC Engineering event
 \textbf{Afraid of Flying} \rdate{\textsc{may}~2014-\textsc{june}~2014}\\
 \emph{Android Application} \hfill \suplinks{\href{https://play.google.com/store/apps/details?id=com.bran.afraidofflying&hl=en}{Play} | \href{https://github.com/benjaminran/afraid-of-flying}{Source}}\\
 Published an app to the Google Play store that uses multiple sensors to detect free fall
-\medskip
-
-\begin{comment}
-\textbf{ChordLookup} \rdate{\textsc{march}~2015}\\
-\emph{Web Service} \hfill \suplinks{\href{https://github.com/benjaminran/chordlookup}{Source}}\\
-Created a Spotify app to retrieve the chords to each new track played in Spotify
 \bigskip
-\end{comment}
+
 
 %%%%% Skills %%%%%
 \mhead{Skills}
@@ -255,18 +258,22 @@ Created a Spotify app to retrieve the chords to each new track played in Spotify
 \vspace{-5mm}% TODO make better
 %%%%% Languages %%%%%
 \mhead{Languages}
-Java, Python, \CPP{}, Javascript, Bash
+Java, Python, C, Bash, Javascript
 \medskip
 
 %%%%% Build Systems %%%%%
-\mhead{Build Systems}
-Maven, Gradle, Make
-\medskip
+\iftoggle{BUILD_SYSTEMS_INCLUDED}{
+  \mhead{Build Systems}
+  Maven, Gradle, Make
+  \medskip
+}{}
 
 %%%%% Version Control %%%%%
-\mhead{VCS}
-Git
-\medskip
+\iftoggle{VCS_INCLUDED}{
+  \mhead{VCS}
+  Git
+  \medskip
+}{}
 
 %%%%% Interests %%%%%
 \mhead{Interests}

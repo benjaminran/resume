@@ -11,6 +11,11 @@ EC2_WEB_PATH = resume
 EC2_FULL_PATH = ${EC2_WEB_ROOT}/${EC2_WEB_PATH}
 EC2_SSH_URL = ${EC2_USER}@${EC2_IP}
 
+### Conditional Inclusion
+objective?=
+build_systems_included?=true
+vcs_included?=true
+
 ### Temporary and other files
 FILENAME_TMP = resume-filename.tmp
 URL_TMP = bitly-url.tmp
@@ -23,9 +28,7 @@ ${PDF} : resume.tex sub
 	open -g ${PDF}
 
 sub : resume.tex ${OUTPUT} ${GEN}
-	util/tex-sub.sh resume.tex ${GEN}/resume.tex.tmp LAST_UPDATED `date +%m/%d/%Y`
-	util/tex-sub.sh ${GEN}/resume.tex.tmp ${GEN}/resume.tex GIT_COORDINATES `util/git-coordinates.sh`
-	rm ${GEN}/resume.tex.tmp
+	util/tex-sub.py --objective="${objective}" --buildsystems=${build_systems_included} --vcs=${vcs_included} resume.tex ${GEN}/resume.tex
 
 ${OUTPUT} :
 	mkdir -p ${OUTPUT}
@@ -50,3 +53,6 @@ publish : ${PDF}
 	@printf "Shortened url to %s\n" `cat ${URL_TMP}`
 	util/deploy.py `cat ${URL_TMP}`
 	rm ${FILENAME_TMP} ${URL_TMP}
+
+### Copy pdf to archive
+archive : ${PDF}

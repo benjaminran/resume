@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<education>
+  <school>
+    <name>University of California at Santa Cruz<name>
+    <location>Santa Cruz, CA</location>
+    <major>B.S. in Computer Science</major>
+    <gpa>4.0</gpa>
+    <start>
+      <year>2014</year>
+    </start>
+    <end>
+      <year>2017 (Expected)</year>
+    </end>
+  </school>
+  <school>
+    <name>Gunn High School<name>
+    <location>Palo Alto, CA</location>
+    <major>B.S. in Computer Science</major>
+    <gpa>4.19 weighted, 3.83 unweighted</gpa>
+    <start>
+      <year>2010</year>
+    </start>
+    <end>
+      <year>2014</year>
+    </end>
+  </school>
+</education>
+<experience>
+  <exp>
+    <name>InTune Intonation Analysis</name>
+    <type>Private Project</type>
+    <description>
+      <short></short>
+      <long>
+	<item>
+	  Developing an app to perform pattern recognition on pitches played by musicians in order to give intonation feedback
+	</item>
+      </long>
+    </description>
+    <links>
+      <link>
+	<title>Source</title>
+	<url>https://github.com/benjaminran/InTune</url>
+      </link>
+    </links>
+    <start>
+      <month>6</month>
+      <year>2014</year>
+    </start>
+    <end>
+      <ongoing>true</ongoing>
+    </end>
+  </exp>
+  <exp>
+    <type>Internship</type>
+    <name></name>
+    <employer>Waterline Data</employer>
+    <title>QA Intern</title>
+    <description>
+      <short></short>
+      <long>
+	<item>
+	  Configured and debugged HDFS environments
+	</item>
+	<item>
+	  Wrote regression, integration and unit tests for primary product
+	</item>
+	<item>
+	  Configured and worked with CDH and HDP Hadoop distributions using Kerberos authentication as well as Apache Sentry and Ranger authorization to ensure proper function of the Waterline Data Inventory in its interactions with HDFS and Hive
+	</item>
+      </long>
+    </description>
+    <start>
+      <month>6</month>
+      <year>2015</year>
+    </start>
+    <end>
+      <month>9</month>
+      <year>2015</year>
+    </end>
+    <links>
+      <link>
+	<title>Website</title>
+	<url>http://waterlinedata.com/</url>
+      </link>
+    </links>
+  </exp>
+  <exp>
+    <type>School Project</type>
+    <name></name>
+    <title>Microcontroller Group Programmer</title>
+    <employer>UCSC EV R&D Collective</employer>
+    <description>
+      <short></short>
+      <long>
+	<item>
+	  Worked with a team of seniors in Computer Science using Scrum and implemented the C++ steering control module for an electric vehicle microcontroller
+	</item>
+      </long>
+    </description>
+    <start>
+      <month>10</month>
+      <year>2014</year>
+    </start>
+    <end>
+      <month>3</month>
+      <year>2015</year>
+    </end>
+    <links>
+      <link>
+	<title>Source</title>
+	<url>https://github.com/aaguil10/ElectricVehicleMicroController</url>
+      </link>
+    </links>
+  </exp>
+  <exp>
+    <type>Private Project</type>
+    <name>Afraid of Flying</name>
+    <employer></employer>
+    <title></title>
+    <description>
+      <short>Android Application</short>
+      <long>
+	<item>
+	  Published an app to the Google Play store that uses multiple sensors to detect free fall
+	</item>
+      </long>
+    </description>
+    <links>
+      <link>
+	<title>Source</title>
+	<url>https://github.com/benjaminran/afraid-of-flying</url>
+      </link>
+      <link>
+	<title>Play</title>
+	<url>https://play.google.com/store/apps/details?id=com.bran.afraidofflying</url>
+      </link>
+    </links>
+    <start>
+      <month>5</month>
+      <year>2014</year>
+    </start>
+    <end>
+      <month>6</month>
+      <year>2014</year>
+    </end>
+  </exp>
+  <exp>
+    <type>Private Project</type>
+    <name>SoE Event Scraper</name>
+    <employer></employer>
+    <title></title>
+    <description>
+      <short>Web Service</short>
+      <long>
+	<item>
+	  Created a web crawler to scrape and publish a feed of the UCSC Engineering events page
+	</item>
+      </long>
+    </description>
+    <links>
+      <link>
+	<title>Source</title>
+	<url>https://github.com/benjaminran/soe-event-scraper</url>
+      </link>
+    </links>
+    <start>
+      <month>3</month>
+      <year>2015</year>
+    </start>
+    <end>
+      <month>3</month>
+      <year>2015</year>
+    </end>
+  </exp>
+</experience>
+<interests>
+  <interest>
+    <name>Programming</name>
+  </interest>
+  <interest>
+    <name>Jazz</name>
+  </interest>
+  <interest>
+    <name>Trumpet</name>
+  </interest>
+  <interest>
+    <name>Gymnastics</name>
+  </interest>
+  <interest>
+    <name>Windsurfing</name>
+  </interest>
+</interests>
