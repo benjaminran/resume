@@ -48,8 +48,8 @@ commit :
 ### Upload pdf to public server and shorten url
 publish : ${PDF}
 	util/get-next-url.sh ${EC2_SSH_URL} ${EC2_FULL_PATH} >${FILENAME_TMP}
-	scp ${PDF} ${EC2_SSH_URL}:${EC2_WEB_ROOT}/${EC2_WEB_PATH}/`cat ${FILENAME_TMP}`;
-	@printf "Deploying resume as %s\n" `cat ${FILENAME_TMP}`
+	util/upload.sh ${PDF} ${EC2_SSH_URL} ${EC2_FULL_PATH} `cat ${FILENAME_TMP}`
+	@printf "Deployed resume as %s\n" `cat ${FILENAME_TMP}`
 	curl -G https://api-ssl.bitly.com/v3/shorten --data-urlencode access_token@util/bitly-oauth --data-urlencode format=txt --data-urlencode longUrl=http://${EC2_IP}/${EC2_WEB_PATH}/`cat ${FILENAME_TMP}` >${URL_TMP}
 	@printf "Shortened url to %s\n" `cat ${URL_TMP}`
 #	util/deploy.py `cat ${URL_TMP}`
