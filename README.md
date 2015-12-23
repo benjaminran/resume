@@ -46,7 +46,7 @@ The Makefile uses the `sub` target to generate _output/gen/resume.tex_, which co
 # Publishing
 The first step of the publishing process is to upload _resume.pdf_ to a public directory on my webserver. The pdf name is mangled with the date and a number (e.g. _resume-12.17.2015-1.pdf_) to keep filenames distinct. 
 
-Next, the _latest_ symlilnk in the web server directory is updated to point to the new file. 
+Next, the _latest_ symlink in the web server directory is updated to point to the new file. 
 
 Finally, the Bitly REST API is used to shorten the url. Previously this was then used by a Python script (_util/deploy.py_) that automates the browser with Selenium to update my LinkedIn profile with the new link. While _deploy.py_ is no longer used, the link shortening has been kept because it may be useful for later developments.
 
