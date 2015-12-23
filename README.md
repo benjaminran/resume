@@ -10,15 +10,30 @@ This project contains the source files for my resumes and some associated utilit
 The resume build and publishing process is controlled by make.
 
 ### Examples
-`make` _generate a pdf from resume.tex into output/resume.pdf_
+_Generate a pdf from resume.tex into output/resume.pdf:_
+```
+make
+```
 
-`make publish` _upload resume.pdf to remote web server, shorten link with bitly, then edit LinkedIn with new link_
+_Upload resume.pdf to remote web server and shorten link with bitly:_
+```
+make publish
+```
 
-`make objective="Foo bar baz"` _specify the objective to be included_
+_Specify the objective to be included:_
+```
+make objective="Foo bar baz"
+```
 
-`make vcs_included=false` _specify that an optional section should or shouldn't be included in the resume output_
+_Specify that an optional section should or shouldn't be included in the resume output:_
+```
+make vcs_included=false
+```
 
-`make archive` _save resume.pdf in the local archive_
+_Save resume.pdf in the local archive:_
+```
+make archive
+```
 
 ### Defaults
 - "Education", "Professional Experience", "Private Projects", "Skills", "Languages", "Build Systems", "VCS", and "Interests" sections are included by default. "Objective" is left out unless specified.
