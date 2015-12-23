@@ -4,7 +4,7 @@
 A python script that dynamically generates some latex source based on xml content then inserts additional values into the latex source where indicated by %%@sub{TAG}%% pragmas
 """
 from optparse import OptionParser
-from bs4 import BeautifulSoup
+#from bs4 import BeautifulSoup
 import subprocess
 import datetime
 import os
@@ -29,7 +29,7 @@ def getgitcoordinates():
 # Parse command line input
 usage = "tex-sub.py [options] cv.xml inputfile.tex outputfile.tex"
 parser = OptionParser(usage=usage)
-parser.add_option("-o", "--objective", dest="objective", help="Include objective obj in resume", metavar="obj")
+parser.add_option("-o", "--objective", dest="objective", default="", help="Include objective obj in resume", metavar="obj")
 parser.add_option("-b", "--buildsystems", dest="buildsystemsincluded", help="Include the build systems section")
 parser.add_option("-v", "--vcs", dest="vcsincluded", help="Include the version control systems section")
 (options, args) = parser.parse_args()

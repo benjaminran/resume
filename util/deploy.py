@@ -1,4 +1,8 @@
 #!venv/bin/python3
+
+"""
+A python script that updates linkedin with the new link to the resume
+"""
 import sys
 import re
 import configparser

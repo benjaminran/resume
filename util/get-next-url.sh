@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Usage: get-next-url <ssh url> <remote directory to search>
+# Usage: get-next-url.sh <ssh url> <remote directory to search>
 #
 
 HOST=${1}
