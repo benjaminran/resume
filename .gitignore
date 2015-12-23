@@ -19,3 +19,6 @@ credentials.ini
 
 ### Temporary file
 **/*.tmp
+
+### IntelliJ
+.idea
