@@ -6,7 +6,7 @@ Dynamic resume publishing system
 This project contains the source files for my resumes and some associated utilities, like fully automated publishing and dynamic value insertion.
 
 
-# Make
+# Usage
 The resume build and publishing process is controlled by make.
 
 ### Examples
