@@ -45,6 +45,10 @@
 \usepackage{multicol}
 \usepackage{xcolor}
 \usepackage{etoolbox}
+\usepackage[mmddyyyy]{datetime}
+%\usepackage{pythontex}
+%\usepackage[subfolder]{python}
+\usepackage{python}
 
 % fix ocgcolor link breaking; thanks due to Benjamin Lerner (http://goo.gl/VZKR7M)
 \makeatletter
@@ -143,7 +147,7 @@
 \begin{footnotesize}
   \hypersetup{urlcolor=footergray}
   \color{footergray}
-  %%@sub{LAST_UPDATED}%%
+  \today
   ~|~
   \href{https://www.github.com/benjaminran/resume/tree/%%@sub{GIT_COORDINATES}%%
   }{\texttt{}~%%@sub{GIT_COORDINATES}%%
@@ -191,7 +195,7 @@
 \textbf{University of California at Santa Cruz}, Santa Cruz, California \\
 \emph{Bachelor of Science, Computer Science} \rdate{2014–2017 (Expected)}
 \begin{itemize*}
-  \item GPA: 4.00
+  \item GPA: 3.98
 \end{itemize*}
 \medskip
 
@@ -204,7 +208,7 @@
 %%%%% Professonal Experience %%%%%
 \mhead{Professional \\ Experience}
 \textbf{Waterline Data}, Mountain View, CA \rdate{\textsc{june}~2015–\textsc{september}~2015}\\
-\emph{QA Intern} \hfill \suplinks{\href{http://waterlinedata.com/}{Website}}
+\emph{Software Engineering Intern} \hfill \suplinks{\href{http://waterlinedata.com/}{Website}}
 \begin{itemize*}
   \item Configured and debugged HDFS environments
   \item Wrote regression, integration and unit tests for primary product
@@ -221,7 +225,7 @@
 
 %%%%% Private Projects %%%%%
 \mhead{Private \\ Projects}
-\textbf{InTune} \rdate{\textsc{june}~2014–\textsc{present}}\\
+\textbf{PitchPatterns} \rdate{\textsc{june}~2014–\textsc{present}}\\
 \emph{Android Application} \hfill \suplinks{\href{https://github.com/benjaminran/InTune}{Source}}
 \begin{itemize*}
   \item Developing an app to perform pattern recognition on pitches detected by microphone in order to give musicians intonation feedback
@@ -249,15 +253,12 @@
 \vspace{-9mm}% TODO make better
 \begin{multicols}{3}
 \begin{itemize}
-  \item Android Development
-  \item Web Development
-  \item Backend Programming
-  \item Hadoop
-  \item HDFS Administration
-  \item Kerberos
-  \item Shell Scripting
-  \item Test Automation
-  \item CI Configuration
+\item Android Development
+\item Hadoop
+\item HDFS Administration
+\item Kerberos
+\item Test Automation
+\item CI Configuration
 \end{itemize}
 \end{multicols}
 \bigskip
@@ -265,7 +266,7 @@
 \vspace{-5mm}% TODO make better
 %%%%% Languages %%%%%
 \mhead{Languages}
-Java, Python, C, Bash, Javascript
+Java, Python, C, SQL, Bash, Javascript
 \medskip
 
 %%%%% Build Systems %%%%%
@@ -282,6 +283,12 @@ Java, Python, C, Bash, Javascript
   \medskip
 }{}
 
+\begin{python}
+tdegc = 25.0
+tdegf = (tdegc - 32.0)/1.0
+print 'T in DegC is ', tdegc , ' in Deg F is ', tdegf
+\end{python}
+
 %%%%% Interests %%%%%
 \mhead{Interests}
 Programming,
@@ -289,5 +296,10 @@ Jazz,
 Trumpet,
 Gymnastics,
 Windsurfing
+\begin{pycode}
+print(r’\begin{center}’)
+print(r’\textit{A message from Python!}’)
+print(r’\end{center}’)
+\end{pycode}
 
 \end{document}

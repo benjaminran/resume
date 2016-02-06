@@ -1,4 +1,5 @@
 ### Output directories and pdf output file
+SRC = resume.tex python.sty cv.xml
 OUTPUT = output
 GEN = ${OUTPUT}/gen
 PDF = ${OUTPUT}/resume.pdf
@@ -25,7 +26,7 @@ URL_TMP = bitly-url.tmp
 all : ${PDF}
 	open -g ${PDF}
 
-${PDF} : resume.tex cv.xml sub
+${PDF} : ${SRC} sub
 	lualatex --output-directory=${OUTPUT} ${GEN}/resume.tex
 
 sub : resume.tex ${OUTPUT} ${GEN}

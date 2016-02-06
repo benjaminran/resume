@@ -1,0 +1,31 @@
+=>PYTHONTEX#py#default#default#0#i#####8#
+2+2
+=>PYTHONTEX#py#default#default#1#code#####10#
+import cv
+print('howdy doodle')
+print(cv.foo)
+=>PYTHONTEX:SETTINGS#
+version=0.14
+outputdir=pythontex-files-a
+workingdir=.
+workingdirset=false
+gobble=none
+rerun=default
+hashdependencies=default
+makestderr=false
+stderrfilename=full
+keeptemps=none
+pyfuture=default
+pyconfuture=none
+pygments=true
+pygglobal=:GLOBAL||
+fvextfile=-1
+pyconbanner=none
+pyconfilename=stdin
+depythontex=false
+pygfamily=py|python|
+pygfamily=pycon|pycon|
+pygfamily=sympy|python|
+pygfamily=sympycon|pycon|
+pygfamily=pylab|python|
+pygfamily=pylabcon|pycon|

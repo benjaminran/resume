@@ -1,0 +1,64 @@
+Benjamin Ran
+Palo Alto, CA
+650-814-1946
+benjaminran@ucsc.edu
+
+GitHub: https://github.com/benjaminran
+
+
+Education:
+
+University of California at Santa Cruz, Santa Cruz, California
+Bachelor of Science, Computer Science                         2014-2017 (Expected)
+- GPA: 4.00
+
+Gunn High School, Palo Alto, California
+- GPA: 4.19 weighted, 3.83 unweighted                                         2010-2014
+
+
+Professional Experience:
+
+Waterline Data, Mountain View, CA
+Software Engineering Intern
+- Configured and debugged HDFS environments ;
+- Wrote regression, integration and unit tests for primary product ;
+- Configured and worked with CDH and HDP Hadoop distributions using Kerberos
+   authentication as well as Apache Sentry and Ranger authorization to ensure proper
+      function of the Waterline Data Inventory in its interactions with HDFS and Hive
+
+HackingEDU Hackathon
+Developer
+- Worked in a team of four to create a web page recommender Chrome extension.
+
+
+Private Projects:
+
+PitchPatterns
+- Developing an app to perform pattern recognition on pitches detected by microphone
+   in order to give musicians intonation feedback
+
+SoE Event Scraper
+- Created and deployed web crawler to scrape and publish a feed of UCSC Engineering events
+
+Afraid of Flying
+- Published an app to the Google Play store that uses multiple sensors to detect free fall
+
+
+Skills:
+- Android Development
+- Web Development
+- Backend Programming
+- HDFS Administration
+- Hadoop
+- Kerberos
+- Shell Scripting
+- Test Automation
+- CI Configuration
+
+Languages:       Java, Python, C, SQL, Bash, Javascript
+
+Build Systems:   Maven, Gradle, Make
+
+VCS:             Git
+
+Interests:       Programming, Jazz, Trumpet, Gymnastics, Windsurfing
