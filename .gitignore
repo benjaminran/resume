@@ -12,6 +12,7 @@
 
 ### Python
 venv
+__pycache__
 
 ### Authentication Information
 util/bitly-oauth

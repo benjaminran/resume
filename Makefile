@@ -1,6 +1,5 @@
 ### Output directories and pdf output file
 OUTPUT = output
-GEN = ${OUTPUT}/gen
 PDF = ${OUTPUT}/resume.pdf
 ARCHIVE = archive
 
@@ -14,28 +13,28 @@ EC2_SSH_URL = ${EC2_USER}@${EC2_IP}
 
 ### Conditional Inclusion
 objective?=
-build_systems_included?=true
-vcs_included?=true
+build_systems_included?=false
+vcs_included?=false
 
 ### Temporary and other files
 FILENAME_TMP = resume-filename.tmp
 URL_TMP = bitly-url.tmp
 
 ### Write resume to pdf
-all : ${PDF}
+open : ${PDF}
 	open -g ${PDF}
 
-${PDF} : resume.tex cv.xml sub
-	lualatex --output-directory=${OUTPUT} ${GEN}/resume.tex
+${PDF} : clean resume.tex cv.xml cv.py sub
+	cp cv.xml cv.py ${OUTPUT}
+	lualatex -shell-escape --output-directory=${OUTPUT} ${OUTPUT}/resume.tex
+	pythontex ${OUTPUT}/resume
+	lualatex -shell-escape --output-directory=${OUTPUT} ${OUTPUT}/resume.tex
 
-sub : resume.tex ${OUTPUT} ${GEN}
-	util/tex-sub.py --objective="${objective}" --buildsystems=${build_systems_included} --vcs=${vcs_included} cv.xml resume.tex ${GEN}/resume.tex
+sub : resume.tex ${OUTPUT}
+	util/tex-sub.py --objective="${objective}" --buildsystems=${build_systems_included} --vcs=${vcs_included} cv.xml resume.tex ${OUTPUT}/resume.tex
 
 ${OUTPUT} :
 	mkdir -p ${OUTPUT}
-
-${GEN} :
-	mkdir -p ${GEN}
 
 clean :
 	rm -r ${OUTPUT}

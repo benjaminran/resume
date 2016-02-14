@@ -1,0 +1,19 @@
+\textbf{Waterline Data}, Mountain View, CA \rdate{June 2015--September 2015}\\
+\emph{Software Engineering Intern} \hfill \suplinks{\href{http://waterlinedata.com}{Website}}\\
+Worked in a quickly-growing Data Science startup
+\begin{itemize*}
+  \item Configured and debugged HDFS environments
+  \item Wrote regression, integration and unit tests for primary product
+  \item Configured and worked with CDH and HDP Hadoop distributions using Kerberos authentication as well as Apache Sentry and Ranger authorization to ensure proper function of the Waterline Data Inventory in its interactions with HDFS and Hive
+\end{itemize*}
+\medskip
+
+\textbf{HackUCSC Hackathon}, \rdate{January 2016}\\
+\emph{Developer} \hfill \suplinks{\href{http://devpost.com/software/sc-drift}{Devpost} | \href{https://github.com/benjaminran/sc-drift}{Source}}\\
+Created an Android app that rates longboard tricks based off sensor data from the board
+\begin{itemize*}
+  \item Wrote Bluetooth receiver and custom protocol for serial bluetooth data transmission
+  \item Project was featured on Devpost front page and was a hackathon winner
+\end{itemize*}
+\medskip
+
