@@ -5,32 +5,36 @@
       <name>University of California at Santa Cruz</name>
       <location>Santa Cruz, CA</location>
       <major>B.S. in Computer Science</major>
-      <gpa>4.0</gpa>
+      <coursework>
+	<course title="CMPS 102" name="Algorithms"/>
+	<course title="CMPS 142" name="Machine Learning"/>
+	<course title="CMPS 180" name="Databases"/>
+      </coursework>
+      <gpa>3.98</gpa>
       <timespan>2014--2017 (Expected)</timespan>
     </school>
     <school>
       <name>Gunn High School</name>
       <location>Palo Alto, CA</location>
-      <major>B.S. in Computer Science</major>
       <gpa>4.19 weighted, 3.83 unweighted</gpa>
       <timespan>2010--2014</timespan>
     </school>
   </education>
   <experience>
     <exp type="work">
-      <category>professional</category>
+      <category>include</category>
       <name></name>
       <employer>Waterline Data</employer>
       <location>Mountain View, CA</location>
       <position>Software Engineering Intern</position>
       <description>
-	<general>Worked in a quickly-growing Data Science startup</general>
+	<general>Worked in a Data Science startup on a tool for Hadoop data governance and discovery</general>
 	<details>
 	  <detail>
 	    Configured and debugged HDFS environments
 	  </detail>
 	  <detail>
-	    Wrote regression, integration and unit tests for primary product
+	    Wrote regression, integration and unit tests
 	  </detail>
 	  <detail>
 	    Configured and worked with CDH and HDP Hadoop distributions using Kerberos authentication as well as Apache Sentry and Ranger authorization to ensure proper function of the Waterline Data Inventory in its interactions with HDFS and Hive
@@ -43,13 +47,13 @@
       </links>
     </exp>
     <exp type="hackathon">
-      <category>professional</category>
+      <category>include</category>
       <hackathon>HackUCSC Hackathon</hackathon>
       <name>SCDrift</name>
       <description>
-	<general>Created an Android app that rates longboard tricks based off sensor data from the board</general>
+	<general>Created Android app for four-person project in rating longboard tricks via sensor data</general>
 	<details>
-	  <detail>Wrote Bluetooth receiver and custom protocol for serial bluetooth data transmission</detail>
+	  <detail>Used multithreaded architecture to receive Bluetooth data and display results</detail>
 	  <detail>Project was featured on Devpost front page and was a hackathon winner</detail>
 	</details>
       </description>
@@ -74,14 +78,14 @@
       <timespan>October 2015</timespan>
     </exp>
     <exp type="private project">
-      <category>project</category>
+      <category>include</category>
       <name>GetGreen Intonation Analysis</name>
       <medium>Android Application</medium>
       <description>
 	<general>Developed an app that performs realtime statistical analysis of musicians' intonation</general>
 	<details>
 	  <detail>Implemented autocorrelation and zero-cross pitch detection algorithms</detail>
-	  <detail>Configure continuous integration server and build process</detail>
+	  <detail>Configured continuous integration server and build process</detail>
 	  <detail>
 	    Used concurrency mechanisms and design patterns to architect a multithreaded dataflow that ensures app responsiveness on top of realtime data processing
 	  </detail>
@@ -138,8 +142,8 @@
       </description>
       <timespan>May 2014--June 2014</timespan>
       <links>
-	<link title="Source" url="https://github.com/benjaminran/afraid-of-flying"/>
 	<link title="Store" url="https://play.google.com/store/apps/details?id=com.bran.afraidofflying"/>
+	<link title="Source" url="https://github.com/benjaminran/afraid-of-flying"/>
       </links>
     </exp>
   </experience>

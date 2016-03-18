@@ -16,15 +16,6 @@ import re
 def substring(term):
     return "%%@sub{"+term+"}%%"
 
-""" Return the formatted date """
-def formatdate():
-    return datetime.date.today().strftime("%m/%d/%Y")
-
-""" Return the current git coordinates """
-def getgitcoordinates():
-    return subprocess.Popen(["util/git-coordinates.sh", ""], stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0].decode("utf-8").strip()
-
-
 """ Main Routine """
 # Parse command line input
 usage = "tex-sub.py [options] cv.xml inputfile.tex outputfile.tex"
@@ -39,7 +30,6 @@ if(len(args)!=3):
 
 #with open(args[0], 'r') as cvfile:
 #    xml=cvfile.read()
-    
     
 # Do substitutions
 with open(args[1], 'r') as file:

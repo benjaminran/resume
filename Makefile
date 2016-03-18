@@ -11,33 +11,24 @@ EC2_WEB_PATH = resume
 EC2_FULL_PATH = ${EC2_WEB_ROOT}/${EC2_WEB_PATH}
 EC2_SSH_URL = ${EC2_USER}@${EC2_IP}
 
-### Conditional Inclusion
-objective?=
-build_systems_included?=false
-vcs_included?=false
-
 ### Temporary and other files
 FILENAME_TMP = resume-filename.tmp
 URL_TMP = bitly-url.tmp
 
 ### Write resume to pdf
-open : ${PDF}
+open : resume
 	open -g ${PDF}
 
-${PDF} : clean resume.tex cv.xml cv.py sub
+resume : clean output templates/resume.tex.jinja cv.xml cv.py build.py
 	cp cv.xml cv.py ${OUTPUT}
+	python build.py resume > ${OUTPUT}/resume.tex
 	lualatex -shell-escape --output-directory=${OUTPUT} ${OUTPUT}/resume.tex
-	pythontex ${OUTPUT}/resume
-	lualatex -shell-escape --output-directory=${OUTPUT} ${OUTPUT}/resume.tex
-
-sub : resume.tex ${OUTPUT}
-	util/tex-sub.py --objective="${objective}" --buildsystems=${build_systems_included} --vcs=${vcs_included} cv.xml resume.tex ${OUTPUT}/resume.tex
 
 ${OUTPUT} :
-	mkdir -p ${OUTPUT}
+	- mkdir -p ${OUTPUT}
 
 clean :
-	rm -r ${OUTPUT}
+	- rm -r ${OUTPUT}
 
 commit :
 	git add --all

@@ -1,18 +1,24 @@
+### Build
+output
+
 ### TeX
-*.log
-*.aux
-*.out
-*.otf
+**/*.log
+**/*.aux
+**/*.out
+**/*.otf
 
 ### Emacs
 **/*~
+**/*#
 
 ### OS X
 **/*.DS_Store
 
 ### Python
 venv
-__pycache__
+venv2
+**/*.pyc
+**/__pycache__
 
 ### Authentication Information
 util/bitly-oauth

@@ -189,26 +189,13 @@
 
 %%%%% Education %%%%%
 \mhead{Education}%
-\textbf{University of California at Santa Cruz}, Santa Cruz, California \\
-\emph{Bachelor of Science, Computer Science} \rdate{2014–2017 (Expected)}
-\begin{itemize*}
-  \item GPA: 3.98
-\end{itemize*}
-\medskip
-
-\textbf{Gunn High School,} Palo Alto, California
-\begin{itemize*}
-  \item GPA: 4.19 weighted, 3.83 unweighted \rdate{2010-2014}
-\end{itemize*}
+\pyc{import cv; cv.get_education()}
 \bigskip
 
-%%%%% Professonal Experience %%%%%
-\mhead{Professional \\ Experience}%
+%%%%% Experience %%%%%
+\mhead{Experience}%
 \pyc{import cv; cv.get_experience()}
-
-%%%%% Private Projects %%%%%
-\mhead{Private \\ Projects}%
-\pyc{import cv; cv.get_projects()}
+\bigskip
 
 %%%%% Skills %%%%%
 \mhead{Skills}
@@ -222,20 +209,20 @@
 %%%%% Languages %%%%%
 \mhead{Languages}
 \pyc{import cv; print(cv.get_languages())}
-\medskip
+\bigskip
 
 %%%%% Build Systems %%%%%
 \iftoggle{BUILD_SYSTEMS_INCLUDED}{
   \mhead{Build Systems}
   Maven, Gradle, Make
-  \medskip
+  \bigskip
 }{}
 
 %%%%% Version Control %%%%%
 \iftoggle{VCS_INCLUDED}{
   \mhead{VCS}
   Git
-  \medskip
+  \bigskip
 }{}
 
 %%%%% Interests %%%%%

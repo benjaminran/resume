@@ -12,4 +12,4 @@ remote_dir=$3
 remote=$4
 
 scp ${local} ${host}:${remote_dir}/${remote}
-ssh ${host} ln -f -s ${remote_dir}/${remote} ${remote_dir}/latest
+ssh ${host} ln -f -s ${remote_dir}/${remote} ${remote_dir}/latest.pdf

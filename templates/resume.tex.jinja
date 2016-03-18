@@ -125,17 +125,6 @@
 \def\hrulefill{\leavevmode\leaders \hrule height \rulethickness \hfill\kern\z@}
 \makeatletter
 
-%% Conditional Inclusions
-\newtoggle{OBJECTIVE_INCLUDED}
-\togglefalse{OBJECTIVE_INCLUDED}
-
-\newtoggle{BUILD_SYSTEMS_INCLUDED}
-\togglefalse{BUILD_SYSTEMS_INCLUDED}
-
-\newtoggle{VCS_INCLUDED}
-\togglefalse{VCS_INCLUDED}
-
-
 %%%%% Document Start %%%%%
 \begin{document}\flushbottom
 \pagestyle{fancy} \setlength\headwidth{6.5in}
@@ -144,10 +133,10 @@
 \begin{footnotesize}
   \hypersetup{urlcolor=footergray}
   \color{footergray}
-  02/13/2016
+  %{{last_updated%}}
   ~|~
-  \href{https://www.github.com/benjaminran/resume/tree/30afa7c
-  }{\texttt{}~30afa7c
+  \href{https://www.github.com/benjaminran/resume/tree/%{{git_hash%}}
+  }{\texttt{}~%{{git_hash%}}
   }
 \end{footnotesize}
 }
@@ -181,64 +170,87 @@
 \smallskip
 
 %%%%% Objective %%%%%
-\iftoggle{OBJECTIVE_INCLUDED}{
-  \mhead{Objective}
-  \emph{\\}
-  \bigskip
-}{}
-
+%## if objective
+\mhead{Objective}
+\emph{%{{objective%}}
+\bigskip
+%## endif
+  
 %%%%% Education %%%%%
 \mhead{Education}%
-\textbf{University of California at Santa Cruz}, Santa Cruz, California \\
-\emph{Bachelor of Science, Computer Science} \rdate{2014–2017 (Expected)}
-\begin{itemize*}
-  \item GPA: 3.98
-\end{itemize*}
-\medskip
-
-\textbf{Gunn High School,} Palo Alto, California
-\begin{itemize*}
-  \item GPA: 4.19 weighted, 3.83 unweighted \rdate{2010-2014}
-\end{itemize*}
+%## for school in schools
+  \textbf{%{{school.name%}}}, %{{school.location%}} \rdate{%{{school.timespan%}}}
+  %## if school.major is not none
+    \\\emph{%{{school.major%}}}
+  %## endif
+  \begin{itemize*}
+    %## if school.coursework|length != 0
+      \item Relevant Coursework: %{{school.coursework | join(', ')%}}
+    %## endif
+    \item GPA: %{{school.gpa%}}
+  \end{itemize*}
+  \medskip
+%## endfor
 \bigskip
 
-%%%%% Professonal Experience %%%%%
-\mhead{Professional \\ Experience}%
-\pyc{import cv; cv.get_experience()}
-
-%%%%% Private Projects %%%%%
-\mhead{Private \\ Projects}%
-\pyc{import cv; cv.get_projects()}
+%%%%% Experience %%%%%
+\mhead{Experience}%
+%\pyc{import cv; cv.get_experience()}
+%## for exp in experience
+  \textbf{%{{exp.title%}}}%{if exp.location%}, %{{exp.location%}}%{endif%}
+  \rdate{%{{exp.timespan%}}}\\
+  \emph{%{{exp.subtitle%}}} \hfill \suplinks{%{for link in exp.links%}\href{%{{link.url%}}}{%{{link.title%}}}%{if not loop.last%}%{{' | '%}}%{endif%}%{endfor%}}\\
+  %{{exp.description.general%}}
+  %## if exp.description.details|length !=0
+    \begin{itemize*}
+      %## for detail in exp.description.details
+        \item %{{detail%}}
+      %## endfor
+    \end{itemize*}
+  %## endif
+  \medskip
+    
+%## endfor
+\bigskip
 
 %%%%% Skills %%%%%
 \mhead{Skills}
 \vspace{-9mm}% TODO make better
 \begin{multicols}{3}
-\pyc{import cv; print(cv.get_skills())}
+  \begin{itemize}
+    %## for skill in skills
+      \item %{{skill%}}
+    %## endfor
+  \end{itemize}
 \end{multicols}
 \bigskip
 
 \vspace{-5mm}% TODO make better
 %%%%% Languages %%%%%
 \mhead{Languages}
-\pyc{import cv; print(cv.get_languages())}
-\medskip
+%{{ languages | join(', ')  %}}
+\bigskip
 
 %%%%% Build Systems %%%%%
-\iftoggle{BUILD_SYSTEMS_INCLUDED}{
+\begin{comment}
+%#\iftoggle{BUILD_SYSTEMS_INCLUDED}{
   \mhead{Build Systems}
   Maven, Gradle, Make
-  \medskip
+  \bigskip
 }{}
+\end{comment}
 
 %%%%% Version Control %%%%%
-\iftoggle{VCS_INCLUDED}{
+\begin{comment}
+%#\iftoggle{VCS_INCLUDED}{
   \mhead{VCS}
   Git
-  \medskip
+  \bigskip
 }{}
+\end{comment}
 
 %%%%% Interests %%%%%
 \mhead{Interests}
-\pyc{import cv; print(cv.get_interests())}
+%{{ interests | join(', ')  %}}
+
 \end{document}
