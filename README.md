@@ -38,4 +38,4 @@ The publishing process uploads _output/resume.pdf_ to a public directory on my w
 
 Next, the _latest.pdf_ symlink in the web server directory is updated to point to the new file.
 
-See [benjaminran.com/resume/latest.pdf](http://benjaminran.com/resume/lates.pdf).
+See [benjaminran.com/resume/latest.pdf](http://benjaminran.com/resume/latest.pdf).
