@@ -17,7 +17,6 @@ archive
 
 ### Python
 venv
-venv2
 **/*.pyc
 **/__pycache__
 

@@ -6,9 +6,9 @@
       <location>Santa Cruz, CA</location>
       <major>B.S. in Computer Science</major>
       <coursework>
-	<course title="CMPS 102" name="Algorithms"/>
-	<course title="CMPS 142" name="Machine Learning"/>
-	<course title="CMPS 180" name="Databases"/>
+	    <course title="CMPS 102" name="Algorithms"/>
+	    <course title="CMPS 142" name="Machine Learning"/>
+	    <course title="CMPS 180 &amp; 181" name="Database Management Systems"/>
       </coursework>
       <gpa>3.98</gpa>
       <timespan>2014--2017 (Expected)</timespan>
@@ -24,26 +24,67 @@
     <exp type="work">
       <category>include</category>
       <name></name>
+      <employer>A9.com (Amazon)</employer>
+      <location>Palo Alto, CA</location>
+      <position>Software Engineering Intern</position>
+      <description>
+	    <general>Developed BI tools for large-scale ad-hoc log analysis</general>
+	    <details>
+	      <detail>
+	        Developed and deployed log sampling tool using Hive and ElasticSearch
+	      </detail>
+          <detail>
+	        foo bar baz
+	      </detail>
+	    </details>
+      </description>
+      <timespan>June 2015--September 2015</timespan>
+      <links>
+	    <link title="Website" url="http://waterlinedata.com"/>
+      </links>
+    </exp>
+    <exp type="work">
+      <category>include</category>
+      <name></name>
       <employer>Waterline Data</employer>
       <location>Mountain View, CA</location>
       <position>Software Engineering Intern</position>
       <description>
-	<general>Worked in a Data Science startup on a tool for Hadoop data governance and discovery</general>
-	<details>
-	  <detail>
-	    Configured and debugged HDFS environments
-	  </detail>
-	  <detail>
-	    Wrote regression, integration and unit tests
-	  </detail>
-	  <detail>
-	    Configured and worked with CDH and HDP Hadoop distributions using Kerberos authentication as well as Apache Sentry and Ranger authorization to ensure proper function of the Waterline Data Inventory in its interactions with HDFS and Hive
-	  </detail>
-	</details>
+	    <general>Data Science startup developing a tool for Hadoop data governance and discovery</general>
+	    <details>
+	      <detail>
+	        Configured and debugged HDFS environments
+	      </detail>
+	      <detail>
+	        Wrote regression, integration and unit tests
+	      </detail>
+	      <detail>
+	        Configured and worked with CDH and HDP Hadoop distributions using Kerberos authentication as well as Apache Sentry and Ranger authorization to ensure proper function of the Waterline Data Inventory in its interactions with HDFS and Hive
+	      </detail>
+	    </details>
       </description>
       <timespan>June 2015--September 2015</timespan>
       <links>
-	<link title="Website" url="http://waterlinedata.com"/>
+	    <link title="Website" url="http://waterlinedata.com"/>
+      </links>
+    </exp>
+    <exp type="work">
+      <category>include</category>
+      <name></name>
+      <employer>UCSC Genomics Institute - Computational Genomics Lab</employer>
+      <location></location>
+      <position>Developer</position>
+      <description>
+	    <general>Deployed storage service for genomics data processing</general>
+	    <details>
+	      <detail>
+	        Used several Spring Boot servers using MongoDB and H2 databases to integrate with Amazon S3 using KMS server-side encryption and automatically-triggered workflows
+	      </detail>
+	    </details>
+      </description>
+      <timespan>April 2016--Present</timespan>
+      <links>
+	    <link title="Website" url="https://genomics.soe.ucsc.edu/"/>
       </links>
     </exp>
     <exp type="hackathon">
@@ -82,18 +123,18 @@
       <name>GetGreen Intonation Analysis</name>
       <medium>Android Application</medium>
       <description>
-	<general>Developed an app that performs realtime statistical analysis of musicians' intonation</general>
-	<details>
-	  <detail>Implemented autocorrelation and zero-cross pitch detection algorithms</detail>
-	  <detail>Configured continuous integration server and build process</detail>
-	  <detail>
-	    Used concurrency mechanisms and design patterns to architect a multithreaded dataflow that ensures app responsiveness on top of realtime data processing
-	  </detail>
-	</details>
+	    <general>Developed an app that performs realtime statistical analysis of musicians' intonation</general>
+	    <details>
+	      <detail>Implemented autocorrelation and zero-cross pitch detection algorithms</detail>
+	      <detail>Configured continuous integration server and build process</detail>
+	      <detail>
+	        Used concurrency mechanisms and design patterns to architect a multithreaded dataflow that ensures app responsiveness on top of realtime data processing
+	      </detail>
+	    </details>
       </description>
       <links>
-	<link title="Store" url="https://play.google.com/store/apps/details?id=com.bran.getgreen"/>
-	<link title="Source" url="https://github.com/benjaminran/GetGreen"/>
+	    <link title="Store" url="https://play.google.com/store/apps/details?id=com.bran.getgreen"/>
+	    <link title="Source" url="https://github.com/benjaminran/GetGreen"/>
       </links>
       <timespan>June 2014--Present</timespan>
     </exp>
@@ -103,16 +144,16 @@
       <position>Microcontroller Group Programmer</position>
       <employer>UCSC EV R&amp;D Collective</employer>
       <description>
-	<general></general>
-	<details>
-	  <detail>
-	    Worked with a team of seniors in Computer Science using Scrum and implemented the C++ steering control module for an electric vehicle microcontroller
-	  </detail>
-	</details>
+	    <general></general>
+	    <details>
+	      <detail>
+	        Worked with a team of seniors in Computer Science using Scrum and implemented the C++ steering control module for an electric vehicle microcontroller
+	      </detail>
+	    </details>
       </description>
       <timespan>October 2014--March 2015</timespan>
       <links>
-	<link title="Source" url="https://github.com/aaguil10/ElectricVehicleMicroController"/>
+	    <link title="Source" url="https://github.com/aaguil10/ElectricVehicleMicroController"/>
       </links>
     </exp>
     <exp type="private project">
@@ -122,11 +163,11 @@
       <position></position>
       <medium>Web Service</medium>
       <description>
-	<general>Created a web crawler to scrape and publish a feed of the UCSC Engineering events page</general>
-	<details></details>
+	    <general>Created a web crawler to scrape and publish a feed of the UCSC Engineering events page</general>
+	    <details></details>
       </description>
       <links>
-	<link title="Source" url="https://github.com/benjaminran/soe-event-scraper"/>
+	    <link title="Source" url="https://github.com/benjaminran/soe-event-scraper"/>
       </links>
       <timespan>March 2015</timespan>
     </exp>
@@ -137,13 +178,13 @@
       <position></position>
       <medium>Android Application</medium>
       <description>
-	<general>Published an app to the Google Play store that uses multiple sensors to detect free fall</general>
-	<details></details>
+	    <general>Published an app to the Google Play store that uses multiple sensors to detect free fall</general>
+	    <details></details>
       </description>
       <timespan>May 2014--June 2014</timespan>
       <links>
-	<link title="Store" url="https://play.google.com/store/apps/details?id=com.bran.afraidofflying"/>
-	<link title="Source" url="https://github.com/benjaminran/afraid-of-flying"/>
+	    <link title="Store" url="https://play.google.com/store/apps/details?id=com.bran.afraidofflying"/>
+	    <link title="Source" url="https://github.com/benjaminran/afraid-of-flying"/>
       </links>
     </exp>
   </experience>

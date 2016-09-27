@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#
+# Build resume pdf
+#
+
+resume_dir=`dirname $0`/..
+export PYTHONPATH=${resume_dir}/lib:$PYTHONPATH
+echo $PYTHONPATH
+python3 -m cv.builder -t ${resume_dir}/templates/ -o ${resume_dir}/output/ -c ${resume_dir}/content/cv.xml

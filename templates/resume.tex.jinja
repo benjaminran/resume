@@ -195,7 +195,7 @@
 
 %%%%% Experience %%%%%
 \mhead{Experience}%
-%\pyc{import cv; cv.get_experience()}
+%\pyc{from cv import cv; cv.get_experience()}
 %## for exp in experience
   \textbf{%{{exp.title%}}}%{if exp.location%}, %{{exp.location%}}%{endif%}
   \rdate{%{{exp.timespan%}}}\\
@@ -230,27 +230,5 @@
 \mhead{Languages}
 %{{ languages | join(', ')  %}}
 \bigskip
-
-%%%%% Build Systems %%%%%
-\begin{comment}
-%#\iftoggle{BUILD_SYSTEMS_INCLUDED}{
-  \mhead{Build Systems}
-  Maven, Gradle, Make
-  \bigskip
-}{}
-\end{comment}
-
-%%%%% Version Control %%%%%
-\begin{comment}
-%#\iftoggle{VCS_INCLUDED}{
-  \mhead{VCS}
-  Git
-  \bigskip
-}{}
-\end{comment}
-
-%%%%% Interests %%%%%
-\mhead{Interests}
-%{{ interests | join(', ')  %}}
 
 \end{document}

@@ -7,6 +7,12 @@ This project contains the source files for my resumes and some associated utilit
 # Usage
 The resume build and publishing process is controlled by make. Content from _cv.xml_ is made available to a Jinja template (_templates/resume.tex.jinja_) via _cv.py_ and the result, _output/resume.tex_ is compiled into a pdf which can then be automatically published.
 
+# Software Used
+- Python3 with:
+  - Jinja2
+  - Pypandoc
+- foo
+
 ### Examples
 Generate a pdf from _resume.tex_ into _output/resume.pdf_:
 ```
@@ -26,11 +32,6 @@ $ make objective="Obtain a position as an underwater basketweaver"
 Specify that an optional section should or shouldn't be included in the resume output:
 ```
 $ make vcs_included=false
-```
-
-Save _output/resume.pdf_ in the local archive:
-```
-$ make archive
 ```
 
 # Publishing
