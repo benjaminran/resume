@@ -34,13 +34,32 @@
 	        Developed and deployed log sampling tool using Hive and ElasticSearch
 	      </detail>
           <detail>
-	        foo bar baz
+	        Created a Hive Wizard to flexibly build complex Hive queries using crowdsourced query fragments
 	      </detail>
 	    </details>
       </description>
       <timespan>June 2015--September 2015</timespan>
       <links>
-	    <link title="Website" url="http://waterlinedata.com"/>
+	    <link title="Website" url="http://a9.com"/>
+      </links>
+    </exp>
+    <exp type="work">
+      <category>include</category>
+      <name></name>
+      <employer>UCSC Genomics Institute - Computational Genomics Lab</employer>
+      <location></location>
+      <position>Developer</position>
+      <description>
+	    <general>Deployed storage service for genomics data processing</general>
+	    <details>
+	      <detail>
+	        Used Docker, Spring Boot, OAuth2.0, MongoDB, Amazon S3 and KMS
+	      </detail>
+	    </details>
+      </description>
+      <timespan>April 2016--Present</timespan>
+      <links>
+	    <link title="Website" url="https://genomics.soe.ucsc.edu/"/>
       </links>
     </exp>
     <exp type="work">
@@ -66,25 +85,6 @@
       <timespan>June 2015--September 2015</timespan>
       <links>
 	    <link title="Website" url="http://waterlinedata.com"/>
-      </links>
-    </exp>
-    <exp type="work">
-      <category>include</category>
-      <name></name>
-      <employer>UCSC Genomics Institute - Computational Genomics Lab</employer>
-      <location></location>
-      <position>Developer</position>
-      <description>
-	    <general>Deployed storage service for genomics data processing</general>
-	    <details>
-	      <detail>
-	        Used several Spring Boot servers using MongoDB and H2 databases to integrate with Amazon S3 using KMS server-side encryption and automatically-triggered workflows
-	      </detail>
-	    </details>
-      </description>
-      <timespan>April 2016--Present</timespan>
-      <links>
-	    <link title="Website" url="https://genomics.soe.ucsc.edu/"/>
       </links>
     </exp>
     <exp type="hackathon">
@@ -119,7 +119,7 @@
       <timespan>October 2015</timespan>
     </exp>
     <exp type="private project">
-      <category>include</category>
+      <category>don't include</category>
       <name>GetGreen Intonation Analysis</name>
       <medium>Android Application</medium>
       <description>

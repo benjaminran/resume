@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import pdb
-import codecs, datetime, argparse, os, re, subprocess
+import pypandoc, codecs, datetime, argparse, os, re, subprocess
 from jinja2 import Environment, FileSystemLoader
 from .content import Content
 

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-import xml.etree.ElementTree as ET, subprocess
+import pdb
+import xml.etree.ElementTree as ET, subprocess, pypandoc
 
 class Content:
     def __init__(self, path):
@@ -23,8 +24,8 @@ class Content:
     
     def expand_description(self, exp):
         return {
-            'general': exp.find('./description/general').text,
-            'details': [detail.text.strip() for detail in exp.findall('./description/details/detail')]
+            'general': pypandoc.convert_text(exp.find('./description/general').text, 'latex', format='md'),
+            'details': [pypandoc.convert_text(detail.text.strip(), 'latex', format='md') for detail in exp.findall('./description/details/detail')]
         }
     
     def get_experience(self):
