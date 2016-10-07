@@ -38,7 +38,7 @@
 	      </detail>
 	    </details>
       </description>
-      <timespan>June 2015--September 2015</timespan>
+      <timespan>June 2016--September 2016</timespan>
       <links>
 	    <link title="Website" url="http://a9.com"/>
       </links>
@@ -52,6 +52,9 @@
       <description>
 	    <general>Deployed storage service for genomics data processing</general>
 	    <details>
+          <detail>
+            Adapted ICGC cloud storage system for highly automated and secure triggering of UCSC genomic analysis workflows
+          </detail>
 	      <detail>
 	        Used Docker, Spring Boot, OAuth2.0, MongoDB, Amazon S3 and KMS
 	      </detail>
@@ -71,9 +74,6 @@
       <description>
 	    <general>Data Science startup developing a tool for Hadoop data governance and discovery</general>
 	    <details>
-	      <detail>
-	        Configured and debugged HDFS environments
-	      </detail>
 	      <detail>
 	        Wrote regression, integration and unit tests
 	      </detail>
@@ -190,11 +190,11 @@
   </experience>
   <skills>
     <skill name="Android Development"/>
-    <skill name="Hadoop"/>
-    <skill name="HDFS Administration"/>
-    <skill name="Kerberos Administration"/>
-    <skill name="Test Automation"/>
-    <skill name="CI Configuration"/>
+    <skill name="Full Stack Development"/>
+    <skill name="Hadoop \&amp; HDFS"/>
+    <skill name="Machine Learning"/>
+    <skill name="Data Analysis"/>
+    <skill name="Automation CI"/>
   </skills>
   <interests>
     <interest name="Programming"/>
