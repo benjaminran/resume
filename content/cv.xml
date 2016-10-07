@@ -28,7 +28,7 @@
       <location>Palo Alto, CA</location>
       <position>Software Engineering Intern</position>
       <description>
-	    <general>Developed BI tools for large-scale ad-hoc log analysis</general>
+	    <general>Developed BI tools for large-scale, ad-hoc ad server log analysis</general>
 	    <details>
 	      <detail>
 	        Developed and deployed log sampling tool using Hive and ElasticSearch
@@ -36,6 +36,9 @@
           <detail>
 	        Created a Hive Wizard to flexibly build complex Hive queries using crowdsourced query fragments
 	      </detail>
+          <detail>
+            Won first place in A9 Intern Hackathon
+          </detail>
 	    </details>
       </description>
       <timespan>June 2016--September 2016</timespan>
@@ -194,7 +197,7 @@
     <skill name="Hadoop \&amp; HDFS"/>
     <skill name="Machine Learning"/>
     <skill name="Data Analysis"/>
-    <skill name="Automation CI"/>
+    <skill name="Automation"/>
   </skills>
   <interests>
     <interest name="Programming"/>
