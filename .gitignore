@@ -29,3 +29,6 @@ credentials.ini
 
 ### IntelliJ
 .idea
+
+### Vagrant
+.vagrant
