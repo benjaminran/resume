@@ -7,10 +7,6 @@ import re
 from jinja2 import Environment, FileSystemLoader
 from .content import Content
 
-#
-# Build final latex from sources
-#
-
 
 def format_date():
     return datetime.date.today().strftime("%m/%d/%Y")
@@ -41,18 +37,19 @@ def build(outfile, template, content_file):
             skills=content.get_skills(),
             languages=content.get_languages(),
         ))
-    os.system('lualatex -shell-escape --output-directory="'
-              + output_dir + '" ' + outfile)
+    if template_file.endswith('.tex.jinja'):
+        os.system('lualatex -shell-escape --output-directory="'
+                  + output_dir + '" ' + outfile)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('-t', '--template_dir', default='/resume/templates',
+    parser.add_argument('-t', '--template_dir', default='templates',
                         help='path to templates directory')
     parser.add_argument('-o', '--output_dir', help='path to output file',
-                        default='/resume/output')
+                        default='output')
     parser.add_argument('-c', '--content', help='path to cv.xml',
-                        default='/resume/content/cv.xml')
+                        default='content/cv.xml')
     args = parser.parse_args()
     for template in os.listdir(args.template_dir):
         build(

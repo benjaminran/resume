@@ -1,12 +1,9 @@
-### Build/Project Files
-output
-archive
-
 ### TeX
 **/*.log
 **/*.aux
 **/*.out
 **/*.otf
+**/*.pytxcode
 
 ### Emacs
 **/*~

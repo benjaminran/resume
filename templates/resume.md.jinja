@@ -1,0 +1,39 @@
+---
+layout: page
+title: Resume
+description: My resume
+---
+My resume is also available as a [pdf](http://benjaminran.com/resume/benjaminran-latest.pdf).
+
+# Benjamin Ran
+650-814-1946
+benjaminran2@gmail.com
+Palo Alto, CA
+
+## Education
+%## for school in schools
+### *%{{school.name%}}*, _%{{school.location%}}_, %{{school.timespan%}}
+%## if school.major is not none
+%{{school.major%}}
+%## endif
+%## if school.coursework|length != 0
+- Relevant Coursework: %{{school.coursework | join(', ')%}}
+%## endif
+- GPA: %{{school.gpa%}}
+
+%## endfor
+
+## Experience
+%## for exp in experience
+*%{{exp.title%}}*, %{if exp.location%} _%{{exp.location%}}_,%{endif%} %{{exp.timespan%}}
+_%{{exp.subtitle%}}_ %{for link in exp.links%}[%{{link.title%}}](%{{link.url%}})%{if not loop.last%}%{{' | '%}}%{endif%}%{endfor%}
+%{{exp.description.general%}}%{if exp.description.details|length !=0%}%{for detail in exp.description.details%}- %{{detail%}}%{endfor%}%{endif%}
+%## endfor
+
+## Skills
+%## for skill in skills
+- %{{skill%}}
+%## endfor
+
+## Languages
+%{{ languages | join(', ')  %}}
