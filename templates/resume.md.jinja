@@ -6,9 +6,10 @@ description: My resume
 My resume is also available in [pdf](dl/benjaminran.pdf).
 
 # Benjamin Ran
-650-814-1946
-benjaminran2@gmail.com
-Palo Alto, CA
+- 650-814-1946
+- benjaminran2@gmail.com
+- Palo Alto, CA
+- https://www.linkedin.com/in/benjaminran
 
 ## Education
 %## for school in schools
@@ -28,17 +29,10 @@ _%{{school.location%}}_, %{{school.timespan%}}
 
 ## Experience
 %## for exp in experience
-*%{{exp.title%}}*
-
-_%{{exp.subtitle%}}_
-
+### %{{exp.title%}}
 %{for link in exp.links%}[%{{link.title%}}](%{{link.url%}})%{if not loop.last%}%{{' | '%}}%{endif%}%{endfor%}
 
-%{if exp.location%}
-_%{{exp.location%}}_
-%{endif%}
-
-%{{exp.timespan%}}
+_%{{exp.subtitle%}}_ (%{{exp.timespan%}})
 
 %{{exp.description.general%}}
 %{if exp.description.details|length !=0%}%{for detail in exp.description.details%}- %{{detail%}}%{endfor%}%{endif%}
@@ -51,3 +45,5 @@ _%{{exp.location%}}_
 
 ## Languages
 %{{ languages | join(', ') %}}
+
+%{{last_updated%}} - [%{{git_hash%}}](https://www.github.com/benjaminran/resume/tree/%{{git_hash%}})
