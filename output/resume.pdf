@@ -305,13 +305,13 @@ BT
 0 g 0 G
 0 g 0 G
 0.6 g 0.6 G
-/F42 9.96264 Tf 1 0 0 1 251.866 41 Tm [<0011001500100013001400100013001100120018>-500<005D>]TJ
+/F42 9.96264 Tf 1 0 0 1 251.323 41 Tm [<0011001500100013001500100013001100120018>-500<005D>]TJ
 ET
 q
 7 Tr
 BT
-/F44 8.4683 Tf 1 0 0 1 310.576 41 Tm [<0094>]TJ
-/F42 9.96264 Tf 1 0 0 1 320.324 41 Tm [<0017001800130044001400460044>]TJ
+/F44 8.4683 Tf 1 0 0 1 310.033 41 Tm [<0094>]TJ
+/F42 9.96264 Tf 1 0 0 1 319.781 41 Tm [<0045001700460012001600150044>]TJ
 ET
 /OC/OCPrint BDC
 0 0 614.295 794.96999 re
@@ -712,7 +712,7 @@ endobj
 54 0 obj
 <<
 /Author(\376\377\000B\000e\000n\000j\000a\000m\000i\000n\000\040\000R\000a\000n)/Title(\376\377\000r\000e\000s\000u\000m\000e)/Subject()/Creator(LaTeX with hyperref package)/Producer(LuaTeX-0.95.0)/Keywords(\376\377\000b\000e\000n\000j\000a\000m\000i\000n\000\040\000r\000a\000n\000,\000\040\000r\000e\000s\000u\000m\000e\000,\000\040\000b\000e\000n\000j\000a\000m\000i\000n\000,\000\040\000r\000a\000n)
-/CreationDate (D:20170423234354-07'00')/ModDate (D:20170423234354-07'00')/Trapped/False/PTEX.FullBanner (This is LuaTeX, Version 0.95.0 (TeX Live 2016))>>
+/CreationDate (D:20170424003010-07'00')/ModDate (D:20170424003010-07'00')/Trapped/False/PTEX.FullBanner (This is LuaTeX, Version 0.95.0 (TeX Live 2016))>>
 endobj
 2 0 obj
 <</Type/ObjStm/N 39/First 291/Length 6010      >>
@@ -769,8 +769,8 @@ stream
 /Subtype/Link/A<</Type/Action/S/URI/URI(https://github.com/benjaminran/sc-drift)>>
 >>
 % 16 0 obj
-<</Type/Annot /Border[0 0 0]/H/I/C[0 1 1]/Rect[309.579 35.67 355.651 52.108]
-/Subtype/Link/A<</Type/Action/S/URI/URI(https://www.github.com/benjaminran/resume/tree/672c3ec\040)>>
+<</Type/Annot /Border[0 0 0]/H/I/C[0 1 1]/Rect[309.036 35.67 356.194 52.108]
+/Subtype/Link/A<</Type/Action/S/URI/URI(https://www.github.com/benjaminran/resume/tree/d6e154c\040)>>
 >>
 % 19 0 obj
 <</D[6 0 R/XYZ 143 730.862 null]>>
@@ -822,7 +822,7 @@ stream
 endstream
 endobj
 55 0 obj
-<</Type/XRef/Index[0 56]/Size 56/W[1 2 1]/Root 53 0 R/Info 54 0 R/ID[<B48DCDCF921B238A32381564CFE0B622> <B48DCDCF921B238A32381564CFE0B622>]/Length 224       >>
+<</Type/XRef/Index[0 56]/Size 56/W[1 2 1]/Root 53 0 R/Info 54 0 R/ID[<29E8A95B23057FD34D65D7818759918C> <29E8A95B23057FD34D65D7818759918C>]/Length 224       >>
 stream
    ÿ  ½ù         	 
            !    #  9… 9Ê  J+   NW Nœ  g‘   l} lÉ  p’   so sü   ³d  " $ % &»· ÕÆ 

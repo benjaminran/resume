@@ -3,7 +3,7 @@ layout: page
 title: Resume
 description: My resume
 ---
-My resume is also available in [pdf](dl/benjaminran.pdf) or [plaintext](dl/benjaminran.txt).
+My resume is also available in [pdf](/dl/benjaminran.pdf) or [plaintext](/dl/benjaminran.txt).
 
 # Benjamin Ran
 - 650-814-1946
