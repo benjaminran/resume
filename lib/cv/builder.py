@@ -12,11 +12,9 @@ def format_date():
     return datetime.date.today().strftime("%m/%d/%Y")
 
 
-def build(outfile, template, content_file):
-    content = Content(content_file)
+def jinjaEnvironment(template):
     template_dir, template_file = os.path.split(template)
-    output_dir, output_file = os.path.split(outfile)
-    env = Environment(
+    return Environment(
         block_start_string='%{',
         block_end_string='%}',
         variable_start_string='%{{',
@@ -26,7 +24,16 @@ def build(outfile, template, content_file):
         line_comment_prefix='%#',
         line_statement_prefix='%##',
         loader=FileSystemLoader(template_dir)
+    ) if template_file.endswith('.tex.jinja') else Environment(
+        loader=FileSystemLoader(template_dir)
     )
+
+
+def build(outfile, template, content_file):
+    content = Content(content_file)
+    template_dir, template_file = os.path.split(template)
+    output_dir, output_file = os.path.split(outfile)
+    env = jinjaEnvironment(template)
     template = env.get_template(template_file)
     with codecs.open(outfile, "wb", encoding="utf-8") as f:
         f.write(template.render(
@@ -43,23 +50,27 @@ def build(outfile, template, content_file):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description='Build resumes')
     parser.add_argument('-t', '--template_dir', default='templates',
                         help='path to templates directory')
-    parser.add_argument('-o', '--output_dir', help='path to output file',
+    parser.add_argument('-o', '--output_dir', help='path to output directory',
                         default='output')
     parser.add_argument('-c', '--content', help='path to cv.xml',
                         default='content/cv.xml')
+    parser.add_argument('filter', nargs='*', default='txt',
+                        help='only build templates matching this regex')
     args = parser.parse_args()
+    regex = re.compile('|'.join(args.filter))
     for template in os.listdir(args.template_dir):
-        build(
-            os.path.abspath(
-                os.path.join(
-                    args.output_dir, re.sub('\.jinja$', '', template)
-                )
-            ),
-            os.path.abspath(
-                os.path.join(args.template_dir, template)
-            ),
-            os.path.abspath(args.content)
-        )
+        if regex.search(template) is not None:
+            build(
+                os.path.abspath(
+                    os.path.join(
+                        args.output_dir, re.sub('\.jinja$', '', template)
+                    )
+                ),
+                os.path.abspath(
+                    os.path.join(args.template_dir, template)
+                ),
+                os.path.abspath(args.content)
+            )
