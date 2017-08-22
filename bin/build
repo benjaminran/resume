@@ -1,4 +1,0 @@
-#!/bin/bash
-resume_dir=`dirname $0`/..
-export PYTHONPATH=${resume_dir}/lib:$PYTHONPATH
-python3 -m cv.builder "$@"

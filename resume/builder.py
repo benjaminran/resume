@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 import codecs
 import datetime
-import argparse
 import os
-import re
 from jinja2 import Environment, FileSystemLoader
 from .content import Content
 
@@ -47,30 +45,3 @@ def build(outfile, template, content_file):
     if template_file.endswith('.tex.jinja'):
         os.system('lualatex -shell-escape --output-directory="'
                   + output_dir + '" ' + outfile)
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Build resumes')
-    parser.add_argument('-t', '--template_dir', default='templates',
-                        help='path to templates directory')
-    parser.add_argument('-o', '--output_dir', help='path to output directory',
-                        default='output')
-    parser.add_argument('-c', '--content', help='path to cv.xml',
-                        default='content/cv.xml')
-    parser.add_argument('filter', nargs='*', default='txt',
-                        help='only build templates matching this regex')
-    args = parser.parse_args()
-    regex = re.compile('|'.join(args.filter))
-    for template in os.listdir(args.template_dir):
-        if regex.search(template) is not None:
-            build(
-                os.path.abspath(
-                    os.path.join(
-                        args.output_dir, re.sub('\.jinja$', '', template)
-                    )
-                ),
-                os.path.abspath(
-                    os.path.join(args.template_dir, template)
-                ),
-                os.path.abspath(args.content)
-            )
