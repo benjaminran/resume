@@ -16,6 +16,7 @@
 venv
 **/*.pyc
 **/__pycache__
+**/*.egg-info
 
 ### Authentication Information
 util/bitly-oauth
