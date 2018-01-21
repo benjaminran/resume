@@ -1,216 +1,238 @@
 <?xml version="1.0"?>
 <cv>
-  <education>
-    <school>
-      <name>University of California at Santa Cruz</name>
-      <location>Santa Cruz, CA</location>
-      <major>B.S. in Computer Science</major>
-      <coursework>
-	    <course title="CMPS 102" name="Algorithms"/>
-	    <course title="CMPS 142" name="Machine Learning"/>
-	    <course title="CMPS 180 &amp; 181" name="Database Management Systems"/>
-      </coursework>
-      <gpa>3.98</gpa>
-      <timespan>2014--2017 (Expected)</timespan>
-    </school>
-    <school>
-      <name>Gunn High School</name>
-      <location>Palo Alto, CA</location>
-      <gpa>4.19 weighted, 3.83 unweighted</gpa>
-      <timespan>2010--2014</timespan>
-    </school>
-  </education>
-  <experience>
-    <exp type="work">
-      <category>include</category>
-      <name></name>
-      <employer>A9.com (Amazon)</employer>
-      <location>Palo Alto, CA</location>
-      <position>Software Engineering Intern</position>
-      <description>
-	    <general>Developed BI tools for large-scale, ad-hoc ad server log analysis</general>
-	    <details>
-	      <detail>
-	        Developed and deployed log sampling tool using Hive and ElasticSearch
-	      </detail>
-          <detail>
-	        Created a Hive Wizard to flexibly build complex Hive queries using crowdsourced query fragments
-	      </detail>
-          <detail>
-            Won first place in A9 Intern Hackathon
-          </detail>
-	    </details>
-      </description>
-      <timespan>June 2016--September 2016</timespan>
-      <links>
-	    <link title="Website" url="http://a9.com"/>
-      </links>
-    </exp>
-    <exp type="work">
-      <category>include</category>
-      <name></name>
-      <employer>UCSC Genomics Institute - Computational Genomics Lab</employer>
-      <location></location>
-      <position>Developer</position>
-      <description>
-	    <general>Deployed storage service for genomics data processing</general>
-	    <details>
-          <detail>
-            Adapted ICGC cloud storage system for highly automated and secure triggering of UCSC genomic analysis workflows
-          </detail>
-	      <detail>
-	        Used Docker, Spring Boot, OAuth2.0, MongoDB, Amazon S3 and KMS
-	      </detail>
-	    </details>
-      </description>
-      <timespan>April 2016--Present</timespan>
-      <links>
-	    <link title="Website" url="https://genomics.soe.ucsc.edu/"/>
-      </links>
-    </exp>
-    <exp type="work">
-      <category>include</category>
-      <name></name>
-      <employer>Waterline Data</employer>
-      <location>Mountain View, CA</location>
-      <position>Software Engineering Intern</position>
-      <description>
-	    <general>Data Science startup developing a tool for Hadoop data governance and discovery</general>
-	    <details>
-	      <detail>
-	        Wrote regression, integration and unit tests
-	      </detail>
-	      <detail>
-	        Configured and worked with CDH and HDP Hadoop distributions using Kerberos authentication as well as Apache Sentry and Ranger authorization to ensure proper function of the Waterline Data Inventory in its interactions with HDFS and Hive
-	      </detail>
-	    </details>
-      </description>
-      <timespan>June 2015--September 2015</timespan>
-      <links>
-	    <link title="Website" url="http://waterlinedata.com"/>
-      </links>
-    </exp>
-    <exp type="hackathon">
-      <category>include</category>
-      <hackathon>HackUCSC Hackathon</hackathon>
-      <name>SCDrift</name>
-      <description>
-	<general>Created Android app for four-person project in rating longboard tricks via sensor data</general>
-	<details>
-	  <detail>Used multithreaded architecture to receive Bluetooth data and display results</detail>
-	  <detail>Project was featured on Devpost front page and was a hackathon winner</detail>
-	</details>
-      </description>
-      <links>
-	<link title="Devpost" url="http://devpost.com/software/sc-drift"/>
-	<link title="Source" url="https://github.com/benjaminran/sc-drift"/>
-      </links>
-      <timespan>January 2016</timespan>
-    </exp>
-    <exp type="hackathon">
-      <category>don't include</category>
-      <hackathon>HackingEDU Hackathon</hackathon>
-      <name>StudyAdvisor</name>
-      <description>
-	<general>Worked in a team of four to create a web page recommender Chrome extension</general>
-	<details>
-	</details>
-      </description>
-      <links>
-	<link title="Source" url="https://github.com/DR-BoneZ/StudyAdvisor"/>
-      </links>
-      <timespan>October 2015</timespan>
-    </exp>
-    <exp type="private project">
-      <category>don't include</category>
-      <name>GetGreen Intonation Analysis</name>
-      <medium>Android Application</medium>
-      <description>
-	    <general>Developed an app that performs realtime statistical analysis of musicians' intonation</general>
-	    <details>
-	      <detail>Implemented autocorrelation and zero-cross pitch detection algorithms</detail>
-	      <detail>Configured continuous integration server and build process</detail>
-	      <detail>
-	        Used concurrency mechanisms and design patterns to architect a multithreaded dataflow that ensures app responsiveness on top of realtime data processing
-	      </detail>
-	    </details>
-      </description>
-      <links>
-	    <link title="Store" url="https://play.google.com/store/apps/details?id=com.bran.getgreen"/>
-	    <link title="Source" url="https://github.com/benjaminran/GetGreen"/>
-      </links>
-      <timespan>June 2014--Present</timespan>
-    </exp>
-    <exp type="school project">
-      <category>don't include</category>
-      <name></name>
-      <position>Microcontroller Group Programmer</position>
-      <employer>UCSC EV R&amp;D Collective</employer>
-      <description>
-	    <general></general>
-	    <details>
-	      <detail>
-	        Worked with a team of seniors in Computer Science using Scrum and implemented the C++ steering control module for an electric vehicle microcontroller
-	      </detail>
-	    </details>
-      </description>
-      <timespan>October 2014--March 2015</timespan>
-      <links>
-	    <link title="Source" url="https://github.com/aaguil10/ElectricVehicleMicroController"/>
-      </links>
-    </exp>
-    <exp type="private project">
-      <category>project</category>
-      <name>SoE Event Scraper</name>
-      <employer></employer>
-      <position></position>
-      <medium>Web Service</medium>
-      <description>
-	    <general>Created a web crawler to scrape and publish a feed of the UCSC Engineering events page</general>
-	    <details></details>
-      </description>
-      <links>
-	    <link title="Source" url="https://github.com/benjaminran/soe-event-scraper"/>
-      </links>
-      <timespan>March 2015</timespan>
-    </exp>
-    <exp type="private project">
-      <category>project</category>
-      <name>Afraid of Flying</name>
-      <employer></employer>
-      <position></position>
-      <medium>Android Application</medium>
-      <description>
-	    <general>Published an app to the Google Play store that uses multiple sensors to detect free fall</general>
-	    <details></details>
-      </description>
-      <timespan>May 2014--June 2014</timespan>
-      <links>
-	    <link title="Store" url="https://play.google.com/store/apps/details?id=com.bran.afraidofflying"/>
-	    <link title="Source" url="https://github.com/benjaminran/afraid-of-flying"/>
-      </links>
-    </exp>
-  </experience>
-  <skills>
-    <skill name="Android Development"/>
-    <skill name="Full Stack Development"/>
-    <skill name="Hadoop \&amp; HDFS"/>
-    <skill name="Machine Learning"/>
-    <skill name="Data Analysis"/>
-    <skill name="Automation"/>
-  </skills>
-  <interests>
-    <interest name="Programming"/>
-    <interest name="Jazz"/>
-    <interest name="Trumpet"/>
-    <interest name="Gymnastics"/>
-    <interest name="Windsurfing"/>
-  </interests>
-  <languages>
-    <language>Java</language>
-    <language>Python</language>
-    <language>C</language>
-    <language>Bash</language>
-    <language>Javascript</language>
-  </languages>
+    <education>
+        <school>
+            <name>University of California at Santa Cruz</name>
+            <location>Santa Cruz, CA</location>
+            <major>B.S. in Computer Science</major>
+            <coursework>
+	              <course title="CMPS 102" name="Algorithms"/>
+	              <course title="CMPS 142" name="Machine Learning"/>
+	              <course title="CMPS 180 &amp; 181" name="Database Management Systems"/>
+            </coursework>
+            <gpa>3.98</gpa>
+            <timespan>2014--2017 (Expected)</timespan>
+        </school>
+        <school>
+            <name>Gunn High School</name>
+            <location>Palo Alto, CA</location>
+            <gpa>4.19 weighted, 3.83 unweighted</gpa>
+            <timespan>2010--2014</timespan>
+        </school>
+    </education>
+    <experience>
+        <exp type="work">
+            <category>include</category>
+            <name></name>
+            <employer>A9.com (Amazon)</employer>
+            <location>Palo Alto, CA</location>
+            <position>Software Development Engineer</position>
+            <description>
+	              <general>Working on high-scale, high-performance platform of Amazon Advertising Exchange</general>
+	              <details>
+	                  <detail>
+	                      Developed and deployed log sampling tool using Hive and ElasticSearch
+	                  </detail>
+                    <detail>
+	                      Created a Hive Wizard to flexibly build complex Hive queries using crowdsourced query fragments
+	                  </detail>
+	              </details>
+            </description>
+            <timespan>July 2017--Present</timespan>
+            <links>
+	              <link title="Website" url="http://a9.com"/>
+            </links>
+        </exp>
+        <exp type="work">
+            <category>include</category>
+            <name></name>
+            <employer>A9.com (Amazon)</employer>
+            <location>Palo Alto, CA</location>
+            <position>Software Engineering Intern</position>
+            <description>
+	              <general>Developed BI tools for large-scale, ad-hoc ad server log analysis</general>
+	              <details>
+	                  <detail>
+	                      Developed and deployed log sampling tool using Hive and ElasticSearch
+	                  </detail>
+                    <detail>
+	                      Created a Hive Wizard to flexibly build complex Hive queries using crowdsourced query fragments
+	                  </detail>
+                    <detail>
+                        Won first place in A9 Intern Hackathon
+                    </detail>
+	              </details>
+            </description>
+            <timespan>June 2016--September 2016</timespan>
+            <links>
+	              <link title="Website" url="http://a9.com"/>
+            </links>
+        </exp>
+        <exp type="work">
+            <category>include</category>
+            <name></name>
+            <employer>UCSC Genomics Institute - Computational Genomics Lab</employer>
+            <location></location>
+            <position>Developer</position>
+            <description>
+	              <general>Deployed storage service for genomics data processing</general>
+	              <details>
+                    <detail>
+                        Adapted ICGC cloud storage system for highly automated and secure triggering of UCSC genomic analysis workflows
+                    </detail>
+	                  <detail>
+	                      Used Docker, Spring Boot, OAuth2.0, MongoDB, Amazon S3 and KMS
+	                  </detail>
+	              </details>
+            </description>
+            <timespan>April 2016--Present</timespan>
+            <links>
+	              <link title="Website" url="https://genomics.soe.ucsc.edu/"/>
+            </links>
+        </exp>
+        <exp type="work">
+            <category>include</category>
+            <name></name>
+            <employer>Waterline Data</employer>
+            <location>Mountain View, CA</location>
+            <position>Software Engineering Intern</position>
+            <description>
+	              <general>Data Science startup developing a tool for Hadoop data governance and discovery</general>
+	              <details>
+	                  <detail>
+	                      Wrote regression, integration and unit tests
+	                  </detail>
+	                  <detail>
+	                      Configured and worked with CDH and HDP Hadoop distributions using Kerberos authentication as well as Apache Sentry and Ranger authorization to ensure proper function of the Waterline Data Inventory in its interactions with HDFS and Hive
+	                  </detail>
+	              </details>
+            </description>
+            <timespan>June 2015--September 2015</timespan>
+            <links>
+	              <link title="Website" url="http://waterlinedata.com"/>
+            </links>
+        </exp>
+        <exp type="hackathon">
+            <category>include</category>
+            <hackathon>HackUCSC Hackathon</hackathon>
+            <name>SCDrift</name>
+            <description>
+	              <general>Created Android app for four-person project in rating longboard tricks via sensor data</general>
+	              <details>
+	                  <detail>Used multithreaded architecture to receive Bluetooth data and display results</detail>
+	                  <detail>Project was featured on Devpost front page and was a hackathon winner</detail>
+	              </details>
+            </description>
+            <links>
+	              <link title="Devpost" url="http://devpost.com/software/sc-drift"/>
+	              <link title="Source" url="https://github.com/benjaminran/sc-drift"/>
+            </links>
+            <timespan>January 2016</timespan>
+        </exp>
+        <exp type="hackathon">
+            <category>don't include</category>
+            <hackathon>HackingEDU Hackathon</hackathon>
+            <name>StudyAdvisor</name>
+            <description>
+	              <general>Worked in a team of four to create a web page recommender Chrome extension</general>
+	              <details>
+	              </details>
+            </description>
+            <links>
+	              <link title="Source" url="https://github.com/DR-BoneZ/StudyAdvisor"/>
+            </links>
+            <timespan>October 2015</timespan>
+        </exp>
+        <exp type="private project">
+            <category>don't include</category>
+            <name>GetGreen Intonation Analysis</name>
+            <medium>Android Application</medium>
+            <description>
+	              <general>Developed an app that performs realtime statistical analysis of musicians' intonation</general>
+	              <details>
+	                  <detail>Implemented autocorrelation and zero-cross pitch detection algorithms</detail>
+	                  <detail>Configured continuous integration server and build process</detail>
+	                  <detail>
+	                      Used concurrency mechanisms and design patterns to architect a multithreaded dataflow that ensures app responsiveness on top of realtime data processing
+	                  </detail>
+	              </details>
+            </description>
+            <links>
+	              <link title="Store" url="https://play.google.com/store/apps/details?id=com.bran.getgreen"/>
+	              <link title="Source" url="https://github.com/benjaminran/GetGreen"/>
+            </links>
+            <timespan>June 2014--Present</timespan>
+        </exp>
+        <exp type="school project">
+            <category>don't include</category>
+            <name></name>
+            <position>Microcontroller Group Programmer</position>
+            <employer>UCSC EV R&amp;D Collective</employer>
+            <description>
+	              <general></general>
+	              <details>
+	                  <detail>
+	                      Worked with a team of seniors in Computer Science using Scrum and implemented the C++ steering control module for an electric vehicle microcontroller
+	                  </detail>
+	              </details>
+            </description>
+            <timespan>October 2014--March 2015</timespan>
+            <links>
+	              <link title="Source" url="https://github.com/aaguil10/ElectricVehicleMicroController"/>
+            </links>
+        </exp>
+        <exp type="private project">
+            <category>project</category>
+            <name>SoE Event Scraper</name>
+            <employer></employer>
+            <position></position>
+            <medium>Web Service</medium>
+            <description>
+	              <general>Created a web crawler to scrape and publish a feed of the UCSC Engineering events page</general>
+	              <details></details>
+            </description>
+            <links>
+	              <link title="Source" url="https://github.com/benjaminran/soe-event-scraper"/>
+            </links>
+            <timespan>March 2015</timespan>
+        </exp>
+        <exp type="private project">
+            <category>project</category>
+            <name>Afraid of Flying</name>
+            <employer></employer>
+            <position></position>
+            <medium>Android Application</medium>
+            <description>
+	              <general>Published an app to the Google Play store that uses multiple sensors to detect free fall</general>
+	              <details></details>
+            </description>
+            <timespan>May 2014--June 2014</timespan>
+            <links>
+	              <link title="Store" url="https://play.google.com/store/apps/details?id=com.bran.afraidofflying"/>
+	              <link title="Source" url="https://github.com/benjaminran/afraid-of-flying"/>
+            </links>
+        </exp>
+    </experience>
+    <skills>
+        <skill name="Android Development"/>
+        <skill name="Full Stack Development"/>
+        <skill name="Hadoop \&amp; HDFS"/>
+        <skill name="Machine Learning"/>
+        <skill name="Data Analysis"/>
+        <skill name="Automation"/>
+    </skills>
+    <interests>
+        <interest name="Programming"/>
+        <interest name="Jazz"/>
+        <interest name="Trumpet"/>
+        <interest name="Gymnastics"/>
+        <interest name="Windsurfing"/>
+    </interests>
+    <languages>
+        <language>Java</language>
+        <language>Python</language>
+        <language>C</language>
+        <language>Bash</language>
+        <language>Javascript</language>
+    </languages>
 </cv>
