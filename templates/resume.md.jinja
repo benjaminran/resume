@@ -6,27 +6,9 @@ description: My resume
 My resume is also available in [pdf](/dl/benjaminran.pdf) or [plaintext](/dl/benjaminran.txt).
 
 # Benjamin Ran
-- 650-814-1946
-- benjaminran2@gmail.com
 - Palo Alto, CA
+- benjaminran2@gmail.com
 - [LinkedIn](https://www.linkedin.com/in/benjaminran)
-
-## Education
-{% for school in schools %}
-### {{school.name}}
-_{{school.location}}_, {{school.timespan}}
-
-{%- if school.major is not none %}
-
-{{school.major}}
-{%- endif %}
-
-{%- if school.coursework | length != 0 %}
-- Relevant Coursework: {{school.coursework | join(', ') }}
-{%- endif %}
-- GPA: {{school.gpa}}
-
-{% endfor %}
 
 ## Experience
 {% for exp in experience %}
@@ -49,6 +31,23 @@ _{{exp.subtitle}}_ ({{exp.timespan}})
 ## Skills
 {% for skill in skills -%}
 - {{skill}}
+{% endfor %}
+
+## Education
+{% for school in schools %}
+### {{school.name}}
+_{{school.location}}_, {{school.timespan}}
+
+{%- if school.major is not none %}
+
+{{school.major}}
+{%- endif %}
+
+{%- if school.coursework | length != 0 %}
+- Relevant Coursework: {{school.coursework | join(', ') }}
+{%- endif %}
+- GPA: {{school.gpa}}
+
 {% endfor %}
 
 

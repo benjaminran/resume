@@ -1,16 +1,22 @@
-Benjamin Ran
-============
+---
+layout: page
+title: Resume
+description: My resume
+---
+My resume is also available in [pdf](/dl/benjaminran.pdf) or [plaintext](/dl/benjaminran.txt).
+
+# Benjamin Ran
 - Palo Alto, CA
 - benjaminran2@gmail.com
-- www.linkedin.com/in/benjaminran
+- [LinkedIn](https://www.linkedin.com/in/benjaminran)
+
+## Experience
+
+### A9.com (Amazon)
+_Software Development Engineer_ (July 2017--Present)
 
 
-Experience
-==========
-
-A9.com (Amazon)
-Software Development Engineer (July 2017--Present)
-Website: http://a9.com
+   [Website](http://a9.com)
 
 Engineering the Amazon Advertising Exchange
 - Building a service that auctions ad units in real time
@@ -18,9 +24,11 @@ Engineering the Amazon Advertising Exchange
 fast-moving environment
 
 
-A9.com (Amazon)
-Software Engineering Intern (June 2016--September 2016)
-Website: http://a9.com
+### A9.com (Amazon)
+_Software Engineering Intern_ (June 2016--September 2016)
+
+
+   [Website](http://a9.com)
 
 Developed BI tools for large-scale, ad-hoc ad server log analysis
 - Developed and deployed log sampling tool using Hive and ElasticSearch
@@ -29,18 +37,22 @@ crowdsourced query fragments
 - Won first place in A9 Intern Hackathon
 
 
-UCSC Genomics Institute - Computational Genomics Lab
-Developer (April 2016--Present)
-Website: https://genomics.soe.ucsc.edu/
+### UCSC Genomics Institute - Computational Genomics Lab
+_Developer_ (April 2016--Present)
+
+
+   [Website](https://genomics.soe.ucsc.edu/)
 
 Maintained storage service for genomics data processing
 - Adapted ICGC cloud storage system for highly automated and secure
 triggering of UCSC genomic analysis workflows
 
 
-Waterline Data
-Software Engineering Intern (June 2015--September 2015)
-Website: http://waterlinedata.com
+### Waterline Data
+_Software Engineering Intern_ (June 2015--September 2015)
+
+
+   [Website](http://waterlinedata.com)
 
 Data Science startup developing a tool for Hadoop data governance and
 discovery
@@ -50,8 +62,8 @@ authorization to ensure proper function of the Waterline Data Inventory
 in its interactions with HDFS and Hive
 
 
-Skills
-======
+
+## Skills
 - Backend Development
 - Android Development
 - Hadoop \& HDFS
@@ -60,18 +72,21 @@ Skills
 - Algorithms
 
 
-Education
-=========
+## Education
 
-University of California at Santa Cruz, Santa Cruz, CA, 2014--2017
+### University of California at Santa Cruz
+_Santa Cruz, CA_, 2014--2017
+
 B.S. in Computer Science
 - Relevant Coursework: Algorithms, Operating Systems, Machine Learning, Database Management Systems
 - GPA: 3.98
 
-Gunn High School, Palo Alto, CA, 2010--2014
+
+### Gunn High School
+_Palo Alto, CA_, 2010--2014
 - GPA: 4.19 weighted, 3.83 unweighted
 
 
 
 
-01/21/2018 - www.github.com/benjaminran/resume/tree/703f08e
+01/21/2018 - [703f08e](https://www.github.com/benjaminran/resume/tree/703f08e)

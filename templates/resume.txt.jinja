@@ -1,22 +1,9 @@
 Benjamin Ran
 ============
-- benjaminran2@gmail.com
 - Palo Alto, CA
+- benjaminran2@gmail.com
 - www.linkedin.com/in/benjaminran
 
-
-Education
-=========
-{% for school in schools %}
-{{school.name}}, {{school.location}}, {{school.timespan}}
-{% if school.major is not none -%}
-{{school.major}}
-{% endif %}
-{%- if school.coursework | length != 0 -%}
-- Relevant Coursework: {{school.coursework | join(', ')}}
-{% endif -%}
-- GPA: {{school.gpa}}
-{% endfor %}
 
 Experience
 ==========
@@ -39,6 +26,20 @@ Skills
 {% for skill in skills -%}
 - {{skill}}
 {% endfor %}
+
+Education
+=========
+{% for school in schools %}
+{{school.name}}, {{school.location}}, {{school.timespan}}
+{% if school.major is not none -%}
+{{school.major}}
+{% endif %}
+{%- if school.coursework | length != 0 -%}
+- Relevant Coursework: {{school.coursework | join(', ')}}
+{% endif -%}
+- GPA: {{school.gpa}}
+{% endfor %}
+
 
 
 {{last_updated}} - www.github.com/benjaminran/resume/tree/{{git_hash}}
