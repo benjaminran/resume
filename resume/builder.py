@@ -40,7 +40,6 @@ def build(outfile, template, content_file):
             schools=content.get_schools(),
             experience=content.get_experience(),
             skills=content.get_skills(),
-            languages=content.get_languages(),
         ))
     if template_file.endswith('.tex.jinja'):
         os.system('lualatex -shell-escape --output-directory="'

@@ -1,25 +1,9 @@
 <?xml version="1.0"?>
 <cv>
-    <education>
-        <school>
-            <name>University of California at Santa Cruz</name>
-            <location>Santa Cruz, CA</location>
-            <major>B.S. in Computer Science</major>
-            <coursework>
-	              <course title="CMPS 102" name="Algorithms"/>
-	              <course title="CMPS 142" name="Machine Learning"/>
-	              <course title="CMPS 180 &amp; 181" name="Database Management Systems"/>
-            </coursework>
-            <gpa>3.98</gpa>
-            <timespan>2014--2017 (Expected)</timespan>
-        </school>
-        <school>
-            <name>Gunn High School</name>
-            <location>Palo Alto, CA</location>
-            <gpa>4.19 weighted, 3.83 unweighted</gpa>
-            <timespan>2010--2014</timespan>
-        </school>
-    </education>
+    <resumes>
+        <resume id="main-pdf" template="templates/resume.tex.jinja"/>
+        <!-- <resume id="main-pdf" template="templates/resume.tex.jinja"/> -->
+    </resumes>
     <experience>
         <exp type="work">
             <category>include</category>
@@ -28,14 +12,10 @@
             <location>Palo Alto, CA</location>
             <position>Software Development Engineer</position>
             <description>
-	              <general>Working on high-scale, high-performance platform of Amazon Advertising Exchange</general>
+	              <general>Engineering the Amazon Advertising Exchange</general>
 	              <details>
-	                  <detail>
-	                      Developed and deployed log sampling tool using Hive and ElasticSearch
-	                  </detail>
-                    <detail>
-	                      Created a Hive Wizard to flexibly build complex Hive queries using crowdsourced query fragments
-	                  </detail>
+                    <detail>Building a service that auctions ad units in real time</detail>
+                    <detail>Developing and maintaining a high-scale distributed system in a fast-moving environment</detail>
 	              </details>
             </description>
             <timespan>July 2017--Present</timespan>
@@ -75,14 +55,11 @@
             <location></location>
             <position>Developer</position>
             <description>
-	              <general>Deployed storage service for genomics data processing</general>
+	              <general>Maintained storage service for genomics data processing</general>
 	              <details>
                     <detail>
                         Adapted ICGC cloud storage system for highly automated and secure triggering of UCSC genomic analysis workflows
                     </detail>
-	                  <detail>
-	                      Used Docker, Spring Boot, OAuth2.0, MongoDB, Amazon S3 and KMS
-	                  </detail>
 	              </details>
             </description>
             <timespan>April 2016--Present</timespan>
@@ -100,9 +77,6 @@
 	              <general>Data Science startup developing a tool for Hadoop data governance and discovery</general>
 	              <details>
 	                  <detail>
-	                      Wrote regression, integration and unit tests
-	                  </detail>
-	                  <detail>
 	                      Configured and worked with CDH and HDP Hadoop distributions using Kerberos authentication as well as Apache Sentry and Ranger authorization to ensure proper function of the Waterline Data Inventory in its interactions with HDFS and Hive
 	                  </detail>
 	              </details>
@@ -113,7 +87,7 @@
             </links>
         </exp>
         <exp type="hackathon">
-            <category>include</category>
+            <category>don't include</category>
             <hackathon>HackUCSC Hackathon</hackathon>
             <name>SCDrift</name>
             <description>
@@ -214,25 +188,32 @@
         </exp>
     </experience>
     <skills>
+        <skill name="Backend Development"/>
         <skill name="Android Development"/>
-        <skill name="Full Stack Development"/>
         <skill name="Hadoop \&amp; HDFS"/>
         <skill name="Machine Learning"/>
-        <skill name="Data Analysis"/>
         <skill name="Automation"/>
+        <skill name="Algorithms"/>
     </skills>
-    <interests>
-        <interest name="Programming"/>
-        <interest name="Jazz"/>
-        <interest name="Trumpet"/>
-        <interest name="Gymnastics"/>
-        <interest name="Windsurfing"/>
-    </interests>
-    <languages>
-        <language>Java</language>
-        <language>Python</language>
-        <language>C</language>
-        <language>Bash</language>
-        <language>Javascript</language>
-    </languages>
+    <education>
+        <school>
+            <name>University of California at Santa Cruz</name>
+            <location>Santa Cruz, CA</location>
+            <major>B.S. in Computer Science</major>
+            <coursework>
+	              <course title="CMPS 102" name="Algorithms"/>
+                <course title="CMPS 102" name="Operating Systems"/>
+	              <course title="CMPS 142" name="Machine Learning"/>
+	              <course title="CMPS 180 &amp; 181" name="Database Management Systems"/>
+            </coursework>
+            <gpa>3.98</gpa>
+            <timespan>2014--2017</timespan>
+        </school>
+        <school>
+            <name>Gunn High School</name>
+            <location>Palo Alto, CA</location>
+            <gpa>4.19 weighted, 3.83 unweighted</gpa>
+            <timespan>2010--2014</timespan>
+        </school>
+    </education>
 </cv>

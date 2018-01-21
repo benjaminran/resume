@@ -5,6 +5,12 @@ My resume
 This project contains the source files for my resumes. This is used as a submodule in my personal website.
 
 # Usage
+
+```
+pip install -e .
+resume --help
+```
+
 The resume build process is controlled by `bin/build`. Content from _cv.xml_ is injected into different Jinja templates (_templates/resume.*.jinja_) and the results written/compiled into _output_.
 
 # Dependencies

@@ -2,9 +2,8 @@
 
 \def\myauthor{Benjamin Ran}
 \def\mytitle{resume}
-\def\myemail{benjaminran@ucsc.edu}
+\def\myemail{benjaminran2@gmail.com}
 \def\myweb{benjaminran}
-\def\myphone{650-814-1946}
 \def\mykeywords{
   benjamin ran,
   resume, 
@@ -47,58 +46,84 @@
 \usepackage{etoolbox}
 \usepackage{pythontex}
 
-% fix ocgcolor link breaking; thanks due to Benjamin Lerner (http://goo.gl/VZKR7M)
 \makeatletter
-\AtBeginDocument{%
-  \newlength{\temp@x}%
-  \newlength{\temp@y}%
-  \newlength{\temp@w}%
-  \newlength{\temp@h}%
-  \def\my@coords#1#2#3#4{%
-    \setlength{\temp@x}{#1}%
-    \setlength{\temp@y}{#2}%
-    \setlength{\temp@w}{#3}%
-    \setlength{\temp@h}{#4}%
-    \adjustlengths{}%
-    \my@pdfliteral{\strip@pt\temp@x\space\strip@pt\temp@y\space\strip@pt\temp@w\space\strip@pt\temp@h\space re}}%
-  \ifpdf
-    \typeout{In PDF mode}%
-    \def\my@pdfliteral#1{\pdfliteral page{#1}}% I don't know why % this command...
-    \def\adjustlengths{}%
-  \fi
-  \ifxetex
-    \def\my@pdfliteral #1{\special{pdf: literal direct #1}}% isn't equivalent to this one
-    \def\adjustlengths{\setlength{\temp@h}{-\temp@h}\addtolength{\temp@y}{1in}\addtolength{\temp@x}{-1in}}%
-  \fi%
-  \def\Hy@colorlink#1{%
-    \begingroup
-      \ifHy@ocgcolorlinks
-        \def\Hy@ocgcolor{#1}%
-        \my@pdfliteral{q}%
-        \my@pdfliteral{7 Tr}% Set text mode to clipping-only
-      \else
-        \HyColor@UseColor#1%
-      \fi
-  }%
-  \def\Hy@endcolorlink{%
-    \ifHy@ocgcolorlinks%
-      \my@pdfliteral{/OC/OCPrint BDC}%
-      \my@coords{0pt}{0pt}{\pdfpagewidth}{\pdfpageheight}%
-      \my@pdfliteral{F}% Fill clipping path (the url's text) with current color
-      \my@pdfliteral{EMC/OC/OCView BDC}%
-      \begingroup%
-        \expandafter\HyColor@UseColor\Hy@ocgcolor%
-        \my@coords{0pt}{0pt}{\pdfpagewidth}{\pdfpageheight}%
-        \my@pdfliteral{F}% Fill clipping path (the url's text) with \Hy@ocgcolor
-      \endgroup%
-      \my@pdfliteral{EMC}%
-      \my@pdfliteral{0 Tr}% Reset text to normal mode
-      \my@pdfliteral{Q}%
+\def\MT@is@composite#1#2\relax{%
+  \ifx\\#2\\\else
+    \expandafter\def\expandafter\MT@char\expandafter{\csname\expandafter
+                    \string\csname\MT@encoding\endcsname
+                    \MT@detokenize@n{#1}-\MT@detokenize@n{#2}\endcsname}%
+    % 3 lines added:
+    \ifx\UnicodeEncodingName\@undefined\else
+      \expandafter\expandafter\expandafter\MT@is@uni@comp\MT@char\iffontchar\else\fi\relax
     \fi
-    \endgroup
-  }%
+    \expandafter\expandafter\expandafter\MT@is@letter\MT@char\relax\relax
+    \ifnum\MT@char@ < \z@
+      \ifMT@xunicode
+        \edef\MT@char{\MT@exp@two@c\MT@strip@prefix\meaning\MT@char>\relax}%
+          \expandafter\MT@exp@two@c\expandafter\MT@is@charx\expandafter
+            \MT@char\MT@charxstring\relax\relax\relax\relax\relax
+      \fi
+    \fi
+  \fi
+}
+% new:
+\def\MT@is@uni@comp#1\iffontchar#2\else#3\fi\relax{%
+  \ifx\\#2\\\else\edef\MT@char{\iffontchar#2\fi}\fi
 }
 \makeatother
+
+% fix ocgcolor link breaking; thanks due to Benjamin Lerner (http://goo.gl/VZKR7M)
+%% \makeatletter
+%% \AtBeginDocument{%
+%%   \newlength{\temp@x}%
+%%   \newlength{\temp@y}%
+%%   \newlength{\temp@w}%
+%%   \newlength{\temp@h}%
+%%   \def\my@coords#1#2#3#4{%
+%%     \setlength{\temp@x}{#1}%
+%%     \setlength{\temp@y}{#2}%
+%%     \setlength{\temp@w}{#3}%
+%%     \setlength{\temp@h}{#4}%
+%%     \adjustlengths{}%
+%%     \my@pdfliteral{\strip@pt\temp@x\space\strip@pt\temp@y\space\strip@pt\temp@w\space\strip@pt\temp@h\space re}}%
+%%   \ifpdf
+%%     \typeout{In PDF mode}%
+%%     \def\my@pdfliteral#1{\pdfliteral page{#1}}% I don't know why % this command...
+%%     \def\adjustlengths{}%
+%%   \fi
+%%   \ifxetex
+%%     \def\my@pdfliteral #1{\special{pdf: literal direct #1}}% isn't equivalent to this one
+%%     \def\adjustlengths{\setlength{\temp@h}{-\temp@h}\addtolength{\temp@y}{1in}\addtolength{\temp@x}{-1in}}%
+%%   \fi%
+%%   \def\Hy@colorlink#1{%
+%%     \begingroup
+%%       \ifHy@ocgcolorlinks
+%%         \def\Hy@ocgcolor{#1}%
+%%         \my@pdfliteral{q}%
+%%         \my@pdfliteral{7 Tr}% Set text mode to clipping-only
+%%       \else
+%%         \HyColor@UseColor#1%
+%%       \fi
+%%   }%
+%%   \def\Hy@endcolorlink{%
+%%     \ifHy@ocgcolorlinks%
+%%       \my@pdfliteral{/OC/OCPrint BDC}%
+%%       \my@coords{0pt}{0pt}{\pdfpagewidth}{\pdfpageheight}%
+%%       \my@pdfliteral{F}% Fill clipping path (the url's text) with current color
+%%       \my@pdfliteral{EMC/OC/OCView BDC}%
+%%       \begingroup%
+%%         \expandafter\HyColor@UseColor\Hy@ocgcolor%
+%%         \my@coords{0pt}{0pt}{\pdfpagewidth}{\pdfpageheight}%
+%%         \my@pdfliteral{F}% Fill clipping path (the url's text) with \Hy@ocgcolor
+%%       \endgroup%
+%%       \my@pdfliteral{EMC}%
+%%       \my@pdfliteral{0 Tr}% Reset text to normal mode
+%%       \my@pdfliteral{Q}%
+%%     \fi
+%%     \endgroup
+%%   }%
+%% }
+%% \makeatother
 % end fixes
 
 
@@ -133,10 +158,10 @@
 \begin{footnotesize}
   \hypersetup{urlcolor=footergray}
   \color{footergray}
-  04/24/2017
+  01/21/2018
   ~|~
-  \href{https://www.github.com/benjaminran/resume/tree/d6e154c
-  }{\texttt{}~d6e154c
+  \href{https://www.github.com/benjaminran/resume/tree/c609b6a
+  }{\texttt{}~c609b6a
   }
 \end{footnotesize}
 }
@@ -153,13 +178,13 @@
 {
   \begin{minipage}[b]{1.2in}
     \flushleft \footnotesize 
-    Palo Alto, CA \\
+    Palo Alto, CA, USA \\
     \href{https://www.github.com/\myweb}{\texttt{}}~\href{https://www.linkedin.com/in/\myweb}{\texttt{}~\myweb}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{2in}
     \flushright \footnotesize 
-    \href{tel:\myphone}{\myphone} \\ %\texttt{}~
+    %\href{tel:\myphone}{\myphone} \\ %\texttt{}~
     \href{mailto:\myemail}{\myemail} \\
   \end{minipage}
 }\par
@@ -170,25 +195,23 @@
 \smallskip
 
 %%%%% Objective %%%%%
-%%%%% Education %%%%%
-\mhead{Education}%
-  \textbf{University of California at Santa Cruz}, Santa Cruz, CA \rdate{2014--2017 (Expected)}
-    \\\emph{B.S. in Computer Science}
-  \begin{itemize*}
-      \item Relevant Coursework: Algorithms, Machine Learning, Database Management Systems
-    \item GPA: 3.98
-  \end{itemize*}
-  \medskip
-  \textbf{Gunn High School}, Palo Alto, CA \rdate{2010--2014}
-  \begin{itemize*}
-    \item GPA: 4.19 weighted, 3.83 unweighted
-  \end{itemize*}
-  \medskip
-\bigskip
-
 %%%%% Experience %%%%%
 \mhead{Experience}%
 %\pyc{from cv import cv; cv.get_experience()}
+  \textbf{A9.com (Amazon)}, Palo Alto, CA
+  \rdate{July 2017--Present}\\
+  \emph{Software Development Engineer} \hfill \suplinks{\href{http://a9.com}{Website}}\\
+  Engineering the Amazon Advertising Exchange
+
+    \begin{itemize*}
+        \item Building a service that auctions ad units in real time
+
+        \item Developing and maintaining a high-scale distributed system in a
+fast-moving environment
+
+    \end{itemize*}
+  \medskip
+    
   \textbf{A9.com (Amazon)}, Palo Alto, CA
   \rdate{June 2016--September 2016}\\
   \emph{Software Engineering Intern} \hfill \suplinks{\href{http://a9.com}{Website}}\\
@@ -208,13 +231,11 @@ crowdsourced query fragments
   \textbf{UCSC Genomics Institute - Computational Genomics Lab}
   \rdate{April 2016--Present}\\
   \emph{Developer} \hfill \suplinks{\href{https://genomics.soe.ucsc.edu/}{Website}}\\
-  Deployed storage service for genomics data processing
+  Maintained storage service for genomics data processing
 
     \begin{itemize*}
         \item Adapted ICGC cloud storage system for highly automated and secure
 triggering of UCSC genomic analysis workflows
-
-        \item Used Docker, Spring Boot, OAuth2.0, MongoDB, Amazon S3 and KMS
 
     \end{itemize*}
   \medskip
@@ -226,27 +247,10 @@ triggering of UCSC genomic analysis workflows
 discovery
 
     \begin{itemize*}
-        \item Wrote regression, integration and unit tests
-
         \item Configured and worked with CDH and HDP Hadoop distributions using
 Kerberos authentication as well as Apache Sentry and Ranger
 authorization to ensure proper function of the Waterline Data Inventory
 in its interactions with HDFS and Hive
-
-    \end{itemize*}
-  \medskip
-    
-  \textbf{HackUCSC Hackathon}
-  \rdate{January 2016}\\
-  \emph{Developer} \hfill \suplinks{\href{http://devpost.com/software/sc-drift}{Devpost} | \href{https://github.com/benjaminran/sc-drift}{Source}}\\
-  Created Android app for four-person project in rating longboard tricks
-via sensor data
-
-    \begin{itemize*}
-        \item Used multithreaded architecture to receive Bluetooth data and display
-results
-
-        \item Project was featured on Devpost front page and was a hackathon winner
 
     \end{itemize*}
   \medskip
@@ -258,20 +262,30 @@ results
 \vspace{-9mm}% TODO make better
 \begin{multicols}{3}
   \begin{itemize}
+      \item Backend Development
       \item Android Development
-      \item Full Stack Development
       \item Hadoop \& HDFS
       \item Machine Learning
-      \item Data Analysis
       \item Automation
+      \item Algorithms
   \end{itemize}
 \end{multicols}
 \bigskip
 
-\vspace{-5mm}% TODO make better
-%%%%% Languages %%%%%
-\mhead{Languages}
-Java, Python, C, Bash, Javascript
+%%%%% Education %%%%%
+\mhead{Education}%
+  \textbf{University of California at Santa Cruz}, Santa Cruz, CA \rdate{2014--2017}
+    \\\emph{B.S. in Computer Science}
+  \begin{itemize*}
+      \item Relevant Coursework: Algorithms, Operating Systems, Machine Learning, Database Management Systems
+    \item GPA: 3.98
+  \end{itemize*}
+  \medskip
+  \textbf{Gunn High School}, Palo Alto, CA \rdate{2010--2014}
+  \begin{itemize*}
+    \item GPA: 4.19 weighted, 3.83 unweighted
+  \end{itemize*}
+  \medskip
 \bigskip
 
 \end{document}
