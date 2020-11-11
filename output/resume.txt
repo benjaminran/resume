@@ -30,7 +30,7 @@ crowdsourced query fragments
 
 
 UCSC Genomics Institute - Computational Genomics Lab
-Developer (April 2016--Present)
+Developer (April 2016--July 2017)
 Website: https://genomics.soe.ucsc.edu/
 
 Maintained storage service for genomics data processing
@@ -74,4 +74,4 @@ Gunn High School, Palo Alto, CA, 2010--2014
 
 
 
-01/21/2018 - www.github.com/benjaminran/resume/tree/703f08e
+11/10/2020 - www.github.com/benjaminran/resume/tree/a56d411

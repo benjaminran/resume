@@ -6,7 +6,16 @@ This project contains the source files for my resumes. This is used as a submodu
 
 # Usage
 
+Install the following fonts:
+- https://fontsgeek.com/fonts/Adobe-Garamond-Pro-Regular 
+- https://fontsgeek.com/fonts/Adobe-Garamond-Pro-Semibold
+
+Then, assuming macos:
 ```
+brew install pandoc
+python3 -m venv venv
+source venv/bin/activate
+pip install Jinja2
 pip install -e .
 resume --help
 ```

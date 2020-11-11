@@ -38,7 +38,7 @@ crowdsourced query fragments
 
 
 ### UCSC Genomics Institute - Computational Genomics Lab
-_Developer_ (April 2016--Present)
+_Developer_ (April 2016--July 2017)
 
 
    [Website](https://genomics.soe.ucsc.edu/)
@@ -89,4 +89,4 @@ _Palo Alto, CA_, 2010--2014
 
 
 
-01/21/2018 - [703f08e](https://www.github.com/benjaminran/resume/tree/703f08e)
+11/10/2020 - [a56d411](https://www.github.com/benjaminran/resume/tree/a56d411)
