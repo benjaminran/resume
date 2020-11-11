@@ -1,8 +1,11 @@
 # resume
-My resume
+My resume (deprecated)
 
 # Overview
-This project contains the source files for my resumes. This is used as a submodule in my personal website.
+
+This project contained the source files for my resumes. Its outputs were referenced in my personal website.
+
+I no longer use this project; the primary latex format hasn't proved worth the effort to maintain considering I don't regularly use latex for anything else and am not using any distinguishing latex features in my resume. And the markdown/plaintext views have also not provided enough value to justify keeping around. Maybe some day I'll revive it when I need multiple views of the same or overlapping resume content.
 
 # Usage
 
